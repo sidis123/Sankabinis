@@ -11,11 +11,11 @@ using Sankabinis.Models;
 
 namespace Sankabinis.Controllers
 {
-    public class CarsPageController : Controller
+    public class CarsController : Controller
     {
         private readonly SankabinisContext _context;
 
-        public CarsPageController(SankabinisContext context)
+        public CarsController(SankabinisContext context)
         {
             _context = context;
         }
@@ -89,10 +89,13 @@ namespace Sankabinis.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id_Automobilis,Modelis,Marke,Numeris,Galingumas,Spalva,Rida,Pagaminimo_data,Svoris,Kuro_tipas,Pavaru_deze,Kebulas,Klase,Fk_Naudotojasid_Naudotojas")] Automobilis automobilis)
+        public async Task<IActionResult> Create([Bind("Id_Automobilis,Modelis,Marke,Numeris,Galingumas,Spalva,Rida,Pagaminimo_data,Svoris,Kuro_tipas,Pavaru_deze,Kebulas,Fk_Naudotojasid_Naudotojas")] Automobilis automobilis)
         {
             if (ModelState.IsValid)
             {
+                double pw = PowerWeight(automobilis.Svoris, automobilis.Galingumas);
+                automobilis.Klase = (AutomobilioKlase)Klase(pw);
+
                 _context.Add(automobilis);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -100,6 +103,22 @@ namespace Sankabinis.Controllers
             return View(automobilis);
         }
 
+        private double PowerWeight(double svoris, int galia)
+        {
+            return (double)galia / svoris;
+        }
+
+        private int Klase(double pw)
+        {
+            if (pw < 0.05)
+                return 1;
+            else if (pw < 0.1 && pw >= 0.05)
+                return 2;
+            else if (pw < 0.2 && pw >= 0.1)
+                return 3;
+            else
+                return 4;
+        }
         // GET: CarsPage/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -127,7 +146,7 @@ namespace Sankabinis.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id_Automobilis,Modelis,Marke,Numeris,Galingumas,Spalva,Rida,Pagaminimo_data,Svoris,Kuro_tipas,Pavaru_deze,Kebulas,Klase,Fk_Naudotojasid_Naudotojas")] Automobilis automobilis)
+        public async Task<IActionResult> Edit(int id, [Bind("Id_Automobilis,Modelis,Marke,Numeris,Galingumas,Spalva,Rida,Pagaminimo_data,Svoris,Kuro_tipas,Pavaru_deze,Kebulas,Fk_Naudotojasid_Naudotojas")] Automobilis automobilis)
         {
             if (id != automobilis.Id_Automobilis)
             {
@@ -136,6 +155,8 @@ namespace Sankabinis.Controllers
 
             if (ModelState.IsValid)
             {
+                double pw = PowerWeight(automobilis.Svoris, automobilis.Galingumas);
+                automobilis.Klase = (AutomobilioKlase)Klase(pw);
                 try
                 {
                     _context.Update(automobilis);

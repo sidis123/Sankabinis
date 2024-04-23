@@ -26,24 +26,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Gustas\Desktop\PSA\dotnet8\Sankabinis\Sankabinis
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Gustas/Desktop/PSA/dotnet8/Sankabinis/Sankabinis/Views/CarsPage/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1BhZ2VcQ3JlYXRlLmNzaHRtbA==
+[C:/Users/Gustas/Desktop/PSA/dotnet8/Sankabinis/Sankabinis/Views/Cars/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gustas/Desktop/PSA/dotnet8/Sankabinis/Sankabinis/Views/CarsPage/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1BhZ2VcRGVsZXRlLmNzaHRtbA==
+[C:/Users/Gustas/Desktop/PSA/dotnet8/Sankabinis/Sankabinis/Views/Cars/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gustas/Desktop/PSA/dotnet8/Sankabinis/Sankabinis/Views/CarsPage/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1BhZ2VcRGV0YWlscy5jc2h0bWw=
+[C:/Users/Gustas/Desktop/PSA/dotnet8/Sankabinis/Sankabinis/Views/Cars/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gustas/Desktop/PSA/dotnet8/Sankabinis/Sankabinis/Views/CarsPage/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1BhZ2VcRWRpdC5jc2h0bWw=
+[C:/Users/Gustas/Desktop/PSA/dotnet8/Sankabinis/Sankabinis/Views/Cars/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gustas/Desktop/PSA/dotnet8/Sankabinis/Sankabinis/Views/CarsPage/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1BhZ2VcSW5kZXguY3NodG1s
+[C:/Users/Gustas/Desktop/PSA/dotnet8/Sankabinis/Sankabinis/Views/Cars/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Gustas/Desktop/PSA/dotnet8/Sankabinis/Sankabinis/Views/Home/Index.cshtml]

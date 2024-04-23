@@ -250,3 +250,4 @@ C:\Users\Gustas\Desktop\PSA\dotnet8\Sankabinis\Sankabinis\bin\Debug\net8.0\runti
 C:\Users\Gustas\Desktop\PSA\dotnet8\Sankabinis\Sankabinis\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\Gustas\Desktop\PSA\dotnet8\Sankabinis\Sankabinis\obj\Debug\net8.0\Sankabinis.csproj.AssemblyReference.cache
 C:\Users\Gustas\Desktop\PSA\dotnet8\Sankabinis\Sankabinis\obj\Debug\net8.0\Sankabinis.csproj.Up2Date
+C:\Users\Gustas\Desktop\PSA\dotnet8\Sankabinis\Sankabinis\obj\Debug\net8.0\Sankabinis.sourcelink.json
