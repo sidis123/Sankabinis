@@ -19,11 +19,11 @@ namespace Sankabinis.Controllers
         {
             _context = context;
         }
-
+        
         // GET: CarsPage
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Automobilis.ToListAsync());
+            return View(await _context.Car.ToListAsync());
         }
 
         // GET: CarsPage/Details/5
@@ -34,7 +34,7 @@ namespace Sankabinis.Controllers
                 return NotFound();
             }
 
-            var automobilis = await _context.Automobilis
+            var automobilis = await _context.Car
                 .FirstOrDefaultAsync(m => m.Id_Automobilis == id);
             if (automobilis == null)
             {
@@ -89,20 +89,23 @@ namespace Sankabinis.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id_Automobilis,Modelis,Marke,Numeris,Galingumas,Spalva,Rida,Pagaminimo_data,Svoris,Kuro_tipas,Pavaru_deze,Kebulas,Fk_Naudotojasid_Naudotojas")] Automobilis automobilis)
+        public async Task<IActionResult> Create([Bind("Id_Automobilis,Modelis,Marke,Numeris,Galingumas,Spalva,Rida,Pagaminimo_data,Svoris,Kuro_tipas,Pavaru_deze,Kebulas,Fk_Naudotojasid_Naudotojas")] Car automobilis)
         {
             if (ModelState.IsValid)
             {
-                double pw = PowerWeight(automobilis.Svoris, automobilis.Galingumas);
-                automobilis.Klase = (AutomobilioKlase)Klase(pw);
-
+                automobilis.Klase = CalculateClass(automobilis.Svoris, automobilis.Galingumas);
                 _context.Add(automobilis);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            // Reload dropdown data for re-displaying form
+            LoadSelectLists();
             return View(automobilis);
         }
-
+        private bool ValidateData(Car car)
+        {
+            return true;
+        }
         private double PowerWeight(double svoris, int galia)
         {
             return (double)galia / svoris;
@@ -127,7 +130,7 @@ namespace Sankabinis.Controllers
                 return NotFound();
             }
 
-            var automobilis = await _context.Automobilis.FindAsync(id);
+            var automobilis = await _context.Car.FindAsync(id);
             if (automobilis == null)
             {
                 return NotFound();
@@ -146,7 +149,7 @@ namespace Sankabinis.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id_Automobilis,Modelis,Marke,Numeris,Galingumas,Spalva,Rida,Pagaminimo_data,Svoris,Kuro_tipas,Pavaru_deze,Kebulas,Fk_Naudotojasid_Naudotojas")] Automobilis automobilis)
+        public async Task<IActionResult> Edit(int id, [Bind("Id_Automobilis,Modelis,Marke,Numeris,Galingumas,Spalva,Rida,Pagaminimo_data,Svoris,Kuro_tipas,Pavaru_deze,Kebulas,Fk_Naudotojasid_Naudotojas")] Car automobilis)
         {
             if (id != automobilis.Id_Automobilis)
             {
@@ -155,10 +158,9 @@ namespace Sankabinis.Controllers
 
             if (ModelState.IsValid)
             {
-                double pw = PowerWeight(automobilis.Svoris, automobilis.Galingumas);
-                automobilis.Klase = (AutomobilioKlase)Klase(pw);
                 try
                 {
+                    automobilis.Klase = CalculateClass(automobilis.Svoris, automobilis.Galingumas);
                     _context.Update(automobilis);
                     await _context.SaveChangesAsync();
                 }
@@ -175,8 +177,23 @@ namespace Sankabinis.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            LoadSelectLists();
             return View(automobilis);
         }
+        private void LoadSelectLists()
+        {
+            ViewBag.KuroTipasOptions = new SelectList(Enum.GetValues(typeof(KuroTipas)), "Value", "Text");
+            ViewBag.PavaruDezeOptions = new SelectList(Enum.GetValues(typeof(PavaruDeze)), "Value", "Text");
+            ViewBag.KebulasOptions = new SelectList(Enum.GetValues(typeof(Kebulas)), "Value", "Text");
+            ViewBag.KlaseOptions = new SelectList(Enum.GetValues(typeof(AutomobilioKlase)), "Value", "Text");
+        }
+
+        private AutomobilioKlase CalculateClass(double svoris, int galingumas)
+        {
+            double pw = PowerWeight(svoris, galingumas);
+            return (AutomobilioKlase)Klase(pw);
+        }
+
 
         // GET: CarsPage/Delete/5
         public async Task<IActionResult> Delete(int? id)
@@ -186,7 +203,7 @@ namespace Sankabinis.Controllers
                 return NotFound();
             }
 
-            var automobilis = await _context.Automobilis
+            var automobilis = await _context.Car
                 .FirstOrDefaultAsync(m => m.Id_Automobilis == id);
             if (automobilis == null)
             {
@@ -201,10 +218,10 @@ namespace Sankabinis.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var automobilis = await _context.Automobilis.FindAsync(id);
+            var automobilis = await _context.Car.FindAsync(id);
             if (automobilis != null)
             {
-                _context.Automobilis.Remove(automobilis);
+                _context.Car.Remove(automobilis);
             }
 
             await _context.SaveChangesAsync();
@@ -213,7 +230,7 @@ namespace Sankabinis.Controllers
 
         private bool AutomobilisExists(int id)
         {
-            return _context.Automobilis.Any(e => e.Id_Automobilis == id);
+            return _context.Car.Any(e => e.Id_Automobilis == id);
         }
     }
 }

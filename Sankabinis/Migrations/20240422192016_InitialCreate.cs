@@ -12,7 +12,7 @@ namespace Sankabinis.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Automobilis",
+                name: "Car",
                 columns: table => new
                 {
                     Id_Automobilis = table.Column<int>(type: "int", nullable: false)
@@ -41,7 +41,7 @@ namespace Sankabinis.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Automobilis");
+                name: "Car");
         }
     }
 }

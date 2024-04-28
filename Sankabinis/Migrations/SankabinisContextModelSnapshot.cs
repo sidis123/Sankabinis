@@ -22,7 +22,7 @@ namespace Sankabinis.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Sankabinis.Models.Automobilis", b =>
+            modelBuilder.Entity("Sankabinis.Models.Car", b =>
                 {
                     b.Property<int>("Id_Automobilis")
                         .ValueGeneratedOnAdd()
@@ -79,7 +79,7 @@ namespace Sankabinis.Migrations
 
                     b.HasKey("Id_Automobilis");
 
-                    b.ToTable("Automobilis");
+                    b.ToTable("Car");
                 });
 #pragma warning restore 612, 618
         }

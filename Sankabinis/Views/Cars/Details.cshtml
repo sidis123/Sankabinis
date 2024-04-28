@@ -1,4 +1,4 @@
-﻿@model Sankabinis.Models.Automobilis
+﻿@model Sankabinis.Models.Car
 
 @{
     ViewData["Title"] = "Details";
@@ -7,7 +7,7 @@
 <h1>Details</h1>
 
 <div>
-    <h4>Automobilis</h4>
+    <h4>Car</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -91,6 +91,7 @@
     </dl>
 </div>
 <div>
+    <a asp-action="Delete" asp-route-id="@Model?.Id_Automobilis">Delete</a> |
     <a asp-action="Edit" asp-route-id="@Model?.Id_Automobilis">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>

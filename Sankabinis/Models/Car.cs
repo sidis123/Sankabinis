@@ -1,31 +1,36 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sankabinis.Models
 {
-    public class Automobilis
+    [Table("automobilis")]
+    public class Car
     {
         [Key]
         public int Id_Automobilis { get; set; }
 
-        [StringLength(255)]
+        [Required, StringLength(50)]
         public string Modelis { get; set; }
 
-        [StringLength(255)]
+        [Required, StringLength(50)]
         public string Marke { get; set; }
 
-        [StringLength(255)]
+        [Required, StringLength(9)]
         public string Numeris { get; set; }
 
+        [Range(1, 1200)]
         public int Galingumas { get; set; }
 
-        [StringLength(255)]
+        [Required, StringLength(50)]
         public string Spalva { get; set; }
 
+        [Range(0, int.MaxValue)]
         public int Rida { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime Pagaminimo_data { get; set; }
 
+        [Range(1, 50000)]
         public double Svoris { get; set; }
 
         public KuroTipas Kuro_tipas { get; set; }
@@ -34,10 +39,11 @@ namespace Sankabinis.Models
 
         public Kebulas Kebulas { get; set; }
 
+        // This property is calculated based on `Svoris` and `Galingumas`.
         public AutomobilioKlase Klase { get; set; }
 
+        [Required]
         public int Fk_Naudotojasid_Naudotojas { get; set; }
-
     }
 
     public enum KuroTipas
