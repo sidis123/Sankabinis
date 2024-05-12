@@ -7838,19 +7838,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gustas\\.nuget\\packages\\": {}
+    "C:\\Users\\tnaru\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
+      "projectUniqueName": "C:\\Users\\tnaru\\Desktop\\analizes bibys\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
       "projectName": "Sankabinis",
-      "projectPath": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
-      "packagesPath": "C:\\Users\\Gustas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\obj\\",
+      "projectPath": "C:\\Users\\tnaru\\Desktop\\analizes bibys\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
+      "packagesPath": "C:\\Users\\tnaru\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tnaru\\Desktop\\analizes bibys\\Sankabinis\\Sankabinis\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Gustas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tnaru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7858,7 +7865,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
