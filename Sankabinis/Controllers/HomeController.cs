@@ -17,10 +17,13 @@ namespace Sankabinis.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        public IActionResult NavigateToRegistrationPage()
         {
-            return View();
+            return View("~/Views/User/RegistrationPage.cshtml");
+        }
+        public IActionResult NavigateToSignInPage()
+        {
+            return View("~/Views/User/SignInPage.cshtml");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

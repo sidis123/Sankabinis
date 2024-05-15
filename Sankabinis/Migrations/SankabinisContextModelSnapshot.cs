@@ -47,18 +47,18 @@ namespace Sankabinis.Migrations
 
                     b.Property<string>("Marke")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Modelis")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Numeris")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasMaxLength(9)
+                        .HasColumnType("nvarchar(9)");
 
                     b.Property<DateTime>("Pagaminimo_data")
                         .HasColumnType("datetime2");
@@ -71,15 +71,93 @@ namespace Sankabinis.Migrations
 
                     b.Property<string>("Spalva")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<double>("Svoris")
                         .HasColumnType("float");
 
                     b.HasKey("Id_Automobilis");
 
-                    b.ToTable("Car");
+                    b.ToTable("automobilis");
+                });
+
+            modelBuilder.Entity("Sankabinis.Models.User", b =>
+                {
+                    b.Property<int>("Id_Naudotojas")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Naudotojas"));
+
+                    b.Property<string>("Busena")
+                        .IsRequired()
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
+
+                    b.Property<string>("El_pastas")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<int>("Elo")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Gimimo_data")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Laimėta_lenktyniu")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Lenktyniu_skaicius")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Lytis")
+                        .IsRequired()
+                        .HasMaxLength(7)
+                        .HasColumnType("nvarchar(7)");
+
+                    b.Property<int>("Pasitikimo_taskai")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Paskutinio_prisijungimo_data")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Paskyros_sukurimo_data")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Patirtis")
+                        .IsRequired()
+                        .HasMaxLength(13)
+                        .HasColumnType("nvarchar(13)");
+
+                    b.Property<int>("Pralaimėta_lenktyniu")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Slaptazodis")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("Slapyvardis")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<int>("Suspeduotos_busenos_skaicius")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Svoris")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Vardas_pavarde")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.HasKey("Id_Naudotojas");
+
+                    b.ToTable("naudotojas");
                 });
 #pragma warning restore 612, 618
         }

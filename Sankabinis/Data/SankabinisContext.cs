@@ -15,5 +15,6 @@ namespace Sankabinis.Data
         }
 
         public DbSet<Sankabinis.Models.Car> Car { get; set; } = default!;
+        public DbSet<User> Users { get; set; }
     }
 }
