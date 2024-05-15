@@ -1,74 +1,100 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\",
+  "WorkspaceRootPath": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\gustas\\desktop\\psa\\dotnet8\\sankabinis\\sankabinis\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\gustas\\desktop\\psa\\dotnet8\\sankabinis\\sankabinis\\views\\cars\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\cars\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\gustas\\desktop\\psa\\dotnet8\\sankabinis\\sankabinis\\views\\cars\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\cars\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\gustas\\desktop\\psa\\dotnet8\\sankabinis\\sankabinis\\views\\cars\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\cars\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\gustas\\desktop\\psa\\dotnet8\\sankabinis\\sankabinis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\gustas\\desktop\\psa\\dotnet8\\sankabinis\\sankabinis\\views\\cars\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\cars\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\gustas\\desktop\\psa\\dotnet8\\sankabinis\\sankabinis\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\gustas\\desktop\\psa\\dotnet8\\sankabinis\\sankabinis\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\gustas\\desktop\\psa\\dotnet8\\sankabinis\\sankabinis\\views\\cars\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\cars\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\gustas\\desktop\\psa\\dotnet8\\sankabinis\\sankabinis\\data\\sankabiniscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\data\\sankabiniscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\gustas\\desktop\\psa\\dotnet8\\sankabinis\\sankabinis\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\gustas\\desktop\\psa\\dotnet8\\sankabinis\\sankabinis\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\controllers\\leadercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\controllers\\leadercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\data\\sankabiniscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\data\\sankabiniscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\views\\leaders\\leaderpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\leaders\\leaderpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\gustas\\desktop\\psa\\dotnet8\\sankabinis\\sankabinis\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\gustas\\desktop\\psa\\dotnet8\\sankabinis\\sankabinis\\migrations\\20240422192016_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\migrations\\20240422192016_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\gustas\\desktop\\psa\\dotnet8\\sankabinis\\sankabinis\\migrations\\sankabiniscontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\migrations\\sankabiniscontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\gustas\\desktop\\psa\\dotnet8\\sankabinis\\sankabinis\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\views\\cars\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\cars\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\views\\cars\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\cars\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\gustas\\desktop\\psa\\dotnet8\\sankabinis\\sankabinis\\migrations\\20240423024517_removedwatermarksandetc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\migrations\\20240423024517_removedwatermarksandetc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\migrations\\sankabiniscontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\migrations\\sankabiniscontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\migrations\\20240514235140_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\migrations\\20240514235140_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\views\\cars\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\cars\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\views\\cars\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\cars\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\views\\cars\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\cars\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\analo kanalas1\\sankabinis\\sankabinis\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Migrations\\20240423024517_RemovedWaterMarksAndEtc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Migrations\\20240422192016_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,186 +104,284 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Car.cs",
-              "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Models\\Car.cs",
-              "RelativeDocumentMoniker": "Sankabinis\\Models\\Car.cs",
-              "ToolTip": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Models\\Car.cs",
-              "RelativeToolTip": "Sankabinis\\Models\\Car.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAuwC4AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T19:04:12.118Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CarsController.cs",
-              "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Controllers\\CarsController.cs",
-              "RelativeDocumentMoniker": "Sankabinis\\Controllers\\CarsController.cs",
-              "ToolTip": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Controllers\\CarsController.cs",
-              "RelativeToolTip": "Sankabinis\\Controllers\\CarsController.cs",
-              "ViewState": "AQIAAJUAAAAAAAAAAAAhwMoAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T19:09:50.988Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Views\\Cars\\Index.cshtml",
-              "RelativeDocumentMoniker": "Sankabinis\\Views\\Cars\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Views\\Cars\\Index.cshtml",
-              "RelativeToolTip": "Sankabinis\\Views\\Cars\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-22T20:09:18.823Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Views\\Cars\\Create.cshtml",
-              "RelativeDocumentMoniker": "Sankabinis\\Views\\Cars\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Views\\Cars\\Create.cshtml",
-              "RelativeToolTip": "Sankabinis\\Views\\Cars\\Create.cshtml",
-              "ViewState": "AQIAADYAAAAAAAAAAAAowEcAAABTAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-22T19:18:36.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Views\\Cars\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Sankabinis\\Views\\Cars\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Views\\Cars\\Edit.cshtml",
-              "RelativeToolTip": "Sankabinis\\Views\\Cars\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-23T01:36:40.675Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Sankabinis\\Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "Sankabinis\\Models\\ErrorViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T00:42:41.117Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Views\\Cars\\Details.cshtml",
-              "RelativeDocumentMoniker": "Sankabinis\\Views\\Cars\\Details.cshtml",
-              "ToolTip": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Views\\Cars\\Details.cshtml",
-              "RelativeToolTip": "Sankabinis\\Views\\Cars\\Details.cshtml",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAAAF0AAABNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-23T01:43:27.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Views\\Cars\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Sankabinis\\Views\\Cars\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Views\\Cars\\Delete.cshtml",
-              "RelativeToolTip": "Sankabinis\\Views\\Cars\\Delete.cshtml",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAA8AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-23T00:55:29.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Program.cs",
-              "RelativeDocumentMoniker": "Sankabinis\\Program.cs",
-              "ToolTip": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Program.cs",
-              "RelativeToolTip": "Sankabinis\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T19:01:49.158Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SankabinisContext.cs",
-              "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Data\\SankabinisContext.cs",
-              "RelativeDocumentMoniker": "Sankabinis\\Data\\SankabinisContext.cs",
-              "ToolTip": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Data\\SankabinisContext.cs",
-              "RelativeToolTip": "Sankabinis\\Data\\SankabinisContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T00:54:15.076Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Sankabinis\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Sankabinis\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T00:42:52.331Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Sankabinis\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Sankabinis\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAABXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-22T19:12:57.677Z"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Sankabinis\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Models\\User.cs",
+              "RelativeToolTip": "Sankabinis\\Models\\User.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAwCsAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T09:22:37.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Sankabinis\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Sankabinis\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwB4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T00:42:52.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CarsController.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Controllers\\CarsController.cs",
+              "RelativeDocumentMoniker": "Sankabinis\\Controllers\\CarsController.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Controllers\\CarsController.cs",
+              "RelativeToolTip": "Sankabinis\\Controllers\\CarsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T19:09:50.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Sankabinis\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Sankabinis\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T19:15:22.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SankabinisContext.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Data\\SankabinisContext.cs",
+              "RelativeDocumentMoniker": "Sankabinis\\Data\\SankabinisContext.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Data\\SankabinisContext.cs",
+              "RelativeToolTip": "Sankabinis\\Data\\SankabinisContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAASwBQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T00:54:15.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Cars\\Index.cshtml",
+              "RelativeDocumentMoniker": "Sankabinis\\Views\\Cars\\Index.cshtml",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Cars\\Index.cshtml",
+              "RelativeToolTip": "Sankabinis\\Views\\Cars\\Index.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T20:09:18.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Sankabinis\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Sankabinis\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACkAAAB+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T19:12:57.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LeaderController.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Controllers\\LeaderController.cs",
+              "RelativeDocumentMoniker": "Sankabinis\\Controllers\\LeaderController.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Controllers\\LeaderController.cs",
+              "RelativeToolTip": "Sankabinis\\Controllers\\LeaderController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T09:40:26.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Sankabinis\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Sankabinis\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwFYAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T09:24:31.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LeaderPage.cshtml",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Leaders\\LeaderPage.cshtml",
+              "RelativeDocumentMoniker": "Sankabinis\\Views\\Leaders\\LeaderPage.cshtml",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Leaders\\LeaderPage.cshtml",
+              "RelativeToolTip": "Sankabinis\\Views\\Leaders\\LeaderPage.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-15T09:42:58.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Cars\\Create.cshtml",
+              "RelativeDocumentMoniker": "Sankabinis\\Views\\Cars\\Create.cshtml",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Cars\\Create.cshtml",
+              "RelativeToolTip": "Sankabinis\\Views\\Cars\\Create.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEcAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T19:18:36.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20240514235140_Init.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Migrations\\20240514235140_Init.cs",
+              "RelativeDocumentMoniker": "Sankabinis\\Migrations\\20240514235140_Init.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Migrations\\20240514235140_Init.cs",
+              "RelativeToolTip": "Sankabinis\\Migrations\\20240514235140_Init.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T09:22:59.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Sankabinis\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Sankabinis\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-15T09:49:13.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\appsettings.json",
+              "RelativeDocumentMoniker": "Sankabinis\\appsettings.json",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\appsettings.json",
+              "RelativeToolTip": "Sankabinis\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-15T09:00:49.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Program.cs",
+              "RelativeDocumentMoniker": "Sankabinis\\Program.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Program.cs",
+              "RelativeToolTip": "Sankabinis\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T19:01:49.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Cars\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Sankabinis\\Views\\Cars\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Cars\\Delete.cshtml",
+              "RelativeToolTip": "Sankabinis\\Views\\Cars\\Delete.cshtml",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAA8AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T00:55:29.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SankabinisContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Migrations\\SankabinisContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Sankabinis\\Migrations\\SankabinisContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Migrations\\SankabinisContextModelSnapshot.cs",
+              "RelativeToolTip": "Sankabinis\\Migrations\\SankabinisContextModelSnapshot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T19:35:59.495Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 16,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Cars\\Details.cshtml",
+              "RelativeDocumentMoniker": "Sankabinis\\Views\\Cars\\Details.cshtml",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Cars\\Details.cshtml",
+              "RelativeToolTip": "Sankabinis\\Views\\Cars\\Details.cshtml",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAAAF0AAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T01:43:27.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Sankabinis\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Sankabinis\\Models\\ErrorViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T00:42:41.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Cars\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Sankabinis\\Views\\Cars\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\Cars\\Edit.cshtml",
+              "RelativeToolTip": "Sankabinis\\Views\\Cars\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T01:36:40.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Car.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Models\\Car.cs",
+              "RelativeDocumentMoniker": "Sankabinis\\Models\\Car.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Models\\Car.cs",
+              "RelativeToolTip": "Sankabinis\\Models\\Car.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAuwC4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T19:04:12.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "20240423024517_RemovedWaterMarksAndEtc.cs",
               "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Migrations\\20240423024517_RemovedWaterMarksAndEtc.cs",
-              "RelativeDocumentMoniker": "Sankabinis\\Migrations\\20240423024517_RemovedWaterMarksAndEtc.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Migrations\\20240423024517_RemovedWaterMarksAndEtc.cs",
               "ToolTip": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Migrations\\20240423024517_RemovedWaterMarksAndEtc.cs",
-              "RelativeToolTip": "Sankabinis\\Migrations\\20240423024517_RemovedWaterMarksAndEtc.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Migrations\\20240423024517_RemovedWaterMarksAndEtc.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T02:45:18.319Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Views\\_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "Sankabinis\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Views\\_ViewImports.cshtml",
               "RelativeToolTip": "Sankabinis\\Views\\_ViewImports.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -265,41 +389,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "SankabinisContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Migrations\\SankabinisContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Sankabinis\\Migrations\\SankabinisContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Migrations\\SankabinisContextModelSnapshot.cs",
-              "RelativeToolTip": "Sankabinis\\Migrations\\SankabinisContextModelSnapshot.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T19:35:59.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 23,
               "Title": "20240422192016_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Migrations\\20240422192016_InitialCreate.cs",
-              "RelativeDocumentMoniker": "Sankabinis\\Migrations\\20240422192016_InitialCreate.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Migrations\\20240422192016_InitialCreate.cs",
               "ToolTip": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Migrations\\20240422192016_InitialCreate.cs",
-              "RelativeToolTip": "Sankabinis\\Migrations\\20240422192016_InitialCreate.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Migrations\\20240422192016_InitialCreate.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T19:20:17.126Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Sankabinis\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Sankabinis\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-22T19:15:22.567Z"
+              "WhenOpened": "2024-04-22T19:20:17.126Z"
             }
           ]
         }
