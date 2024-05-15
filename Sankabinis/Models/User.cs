@@ -53,5 +53,8 @@ namespace Sankabinis.Models
 
         [StringLength(11)]
         public string Busena { get; set; }
+
+        [ForeignKey("City")]
+        public int CityId { get; set; }
     }
 }

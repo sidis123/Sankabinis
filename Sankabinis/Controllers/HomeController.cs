@@ -25,11 +25,16 @@ namespace Sankabinis.Controllers
         {
             return View("~/Views/User/SignInPage.cshtml");
         }
+        public IActionResult NavigateToProfileCreationPage()
+        {
+            return View("~/Views/User/ProfileCreationPage.cshtml");
+        }
         public IActionResult NavigateToLeaderPage()
         {
             return View("~/Views/Leaders/LeaderPage.cshtml");
         }
 
+        
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

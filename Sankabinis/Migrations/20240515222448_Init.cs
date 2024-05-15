@@ -37,6 +37,20 @@ namespace Sankabinis.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "miestas",
+                columns: table => new
+                {
+                    Id_Miestas = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Pavadinimas = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    Koordinates = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_miestas", x => x.Id_Miestas);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "naudotojas",
                 columns: table => new
                 {
@@ -58,7 +72,8 @@ namespace Sankabinis.Migrations
                     Suspeduotos_busenos_skaicius = table.Column<int>(type: "int", nullable: false),
                     Lytis = table.Column<string>(type: "nvarchar(7)", maxLength: 7, nullable: false),
                     Patirtis = table.Column<string>(type: "nvarchar(13)", maxLength: 13, nullable: false),
-                    Busena = table.Column<string>(type: "nvarchar(11)", maxLength: 11, nullable: false)
+                    Busena = table.Column<string>(type: "nvarchar(11)", maxLength: 11, nullable: false),
+                    CityId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -71,6 +86,9 @@ namespace Sankabinis.Migrations
         {
             migrationBuilder.DropTable(
                 name: "automobilis");
+
+            migrationBuilder.DropTable(
+                name: "miestas");
 
             migrationBuilder.DropTable(
                 name: "naudotojas");
