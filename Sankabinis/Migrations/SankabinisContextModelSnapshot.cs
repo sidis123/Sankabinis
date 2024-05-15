@@ -82,6 +82,29 @@ namespace Sankabinis.Migrations
                     b.ToTable("automobilis");
                 });
 
+            modelBuilder.Entity("Sankabinis.Models.City", b =>
+                {
+                    b.Property<int>("Id_Miestas")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Miestas"));
+
+                    b.Property<string>("Koordinates")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("Pavadinimas")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.HasKey("Id_Miestas");
+
+                    b.ToTable("miestas");
+                });
+
             modelBuilder.Entity("Sankabinis.Models.User", b =>
                 {
                     b.Property<int>("Id_Naudotojas")
@@ -94,6 +117,9 @@ namespace Sankabinis.Migrations
                         .IsRequired()
                         .HasMaxLength(11)
                         .HasColumnType("nvarchar(11)");
+
+                    b.Property<int>("CityId")
+                        .HasColumnType("int");
 
                     b.Property<string>("El_pastas")
                         .IsRequired()

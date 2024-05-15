@@ -1,0 +1,53 @@
+﻿@model Sankabinis.Models.User
+
+<h2>Profile Creation</h2>
+
+<form asp-controller="User" asp-action="ValidateData" method="post">
+    <div class="form-group">
+        <label asp-for="Vardas_pavarde" class="control-label">Full Name</label>
+        <input asp-for="Vardas_pavarde" class="form-control" />
+        <span asp-validation-for="Vardas_pavarde" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="El_pastas" class="control-label">Email Address</label>
+        <input asp-for="El_pastas" class="form-control" />
+        <span asp-validation-for="El_pastas" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Svoris" class="control-label">Weight</label>
+        <input asp-for="Svoris" class="form-control" />
+        <span asp-validation-for="Svoris" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Gimimo_data" class="control-label">Date of Birth</label>
+        <input asp-for="Gimimo_data" type="date" class="form-control" />
+        <span asp-validation-for="Gimimo_data" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Gender</label><br />
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="genderMan" name="Lytis" value="man" checked>
+            <label class="form-check-label" for="genderMan">Man</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="genderWoman" name="Lytis" value="woman">
+            <label class="form-check-label" for="genderWoman">Woman</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Patirtis" class="control-label">Experience</label>
+        <select asp-for="Patirtis" class="form-control">
+            <option value="Junior">Junior</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Senior">Senior</option>
+        </select>
+        <span asp-validation-for="Patirtis" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="CityName" class="control-label">City Name</label>
+        <input type="text" id="CityName" name="cityPavadinimas" class="form-control" />
+        <span class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Profile</button>
+</form>

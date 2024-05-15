@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Sankabinis.Controllers;
 using Sankabinis.Data;
 using Sankabinis.Models;
 
@@ -83,13 +84,14 @@ public class UserController : Controller
             return View("SignInPage", user);
         }
 
-        SignIn(user);
+        SignIn(user, existingUser);
         return View("~/Views/Home/Index.cshtml");
     }
 
-    public IActionResult SignIn(User user)
+    public IActionResult SignIn(User user, User existingUser)
     {
         HttpContext.Session.SetString("Username", user.Slapyvardis);
+        HttpContext.Session.SetInt32("UserId", existingUser.Id_Naudotojas);
         return Ok();    
     }
 
@@ -99,6 +101,37 @@ public class UserController : Controller
         return RedirectToAction("Index", "Home");
     }
 
+    public IActionResult ValidateData(User user, string cityPavadinimas)
+    {
+        if (string.IsNullOrEmpty(user.Vardas_pavarde) ||
+            string.IsNullOrEmpty(user.El_pastas) ||
+            string.IsNullOrEmpty(user.Patirtis) ||
+            string.IsNullOrEmpty(cityPavadinimas))
+        {
+            ModelState.AddModelError(string.Empty, "Please fill in all required fields.");
+            return View("ProfileCreationPage", user);
+        }
+        var loggedInUserId = HttpContext.Session.GetInt32("UserId");
+        var loggedInUser = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == loggedInUserId);
+
+        var cityController = new CityController(_context);
+        cityController.CheckIfExists(cityPavadinimas);
+
+        loggedInUser.Vardas_pavarde = user.Vardas_pavarde;
+        loggedInUser.El_pastas = user.El_pastas;
+        loggedInUser.Patirtis = user.Patirtis;
+        loggedInUser.Svoris = user.Svoris;
+        loggedInUser.Gimimo_data = user.Gimimo_data;
+
+        var city = _context.City.FirstOrDefault(c => c.Pavadinimas == cityPavadinimas);
+        if (city != null)
+        {
+            loggedInUser.CityId = city.Id_Miestas;
+        }
+        _context.SaveChanges();
+
+        return RedirectToAction("Index", "Home");
+    }
 
 
 
