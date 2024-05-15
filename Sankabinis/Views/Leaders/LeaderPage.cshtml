@@ -1,0 +1,53 @@
+﻿@model List<Sankabinis.Models.User>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leader Page</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Leaderboard</h1>
+
+    <table id="leaderboard-table">
+        <tr>
+            <th>Vardas ir Pavardė</th>
+            <th>Elo</th>
+        </tr>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: '@Url.Action("GetLeaderboardData", "Leader")',
+                type: 'GET',
+                success: function (data) {
+                    $.each(data, function (index, leader) {
+                        $('#leaderboard-table').append('<tr><td>' + leader.vardas_pavarde + '</td><td>' + leader.elo + '</td></tr>');
+                    });
+                },
+                error: function () {
+                    console.error('Error fetching leaderboard data.');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

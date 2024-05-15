@@ -25,6 +25,10 @@ namespace Sankabinis.Controllers
         {
             return View("~/Views/User/SignInPage.cshtml");
         }
+        public IActionResult NavigateToLeaderPage()
+        {
+            return View("~/Views/Leaders/LeaderPage.cshtml");
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
