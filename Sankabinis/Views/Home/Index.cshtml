@@ -1,8 +1,14 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    var username = Context.Session.GetString("Username");
 }
 
 <div class="text-center">
     <h1 class="display-4">Sveiki atvykę į Sankabinis!</h1>
     <p>Nugalėk ir lik nenugalėtas!</p>
+
+    @if (!string.IsNullOrEmpty(username))
+    {
+        <p>Logged in as: @username</p>
+    }
 </div>

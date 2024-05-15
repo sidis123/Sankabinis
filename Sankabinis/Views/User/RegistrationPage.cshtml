@@ -1,0 +1,17 @@
+﻿@model Sankabinis.Models.User
+
+<h2>Register</h2>
+
+<form asp-controller="User" asp-action="ValidateRegistration" method="post">
+    <div class="form-group">
+        <label asp-for="Slapyvardis" class="control-label"></label>
+        <input asp-for="Slapyvardis" class="form-control" />
+        <span asp-validation-for="Slapyvardis" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Slaptazodis" class="control-label"></label>
+        <input asp-for="Slaptazodis" class="form-control" />
+        <span asp-validation-for="Slaptazodis" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>

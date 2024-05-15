@@ -1,25 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tnaru\\Desktop\\analizes bibys\\Sankabinis\\Sankabinis\\Sankabinis.csproj": {}
+    "C:\\Users\\myka\\Documents\\GitHub\\Sankabinis\\Sankabinis\\Sankabinis.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tnaru\\Desktop\\analizes bibys\\Sankabinis\\Sankabinis\\Sankabinis.csproj": {
+    "C:\\Users\\myka\\Documents\\GitHub\\Sankabinis\\Sankabinis\\Sankabinis.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tnaru\\Desktop\\analizes bibys\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
+        "projectUniqueName": "C:\\Users\\myka\\Documents\\GitHub\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
         "projectName": "Sankabinis",
-        "projectPath": "C:\\Users\\tnaru\\Desktop\\analizes bibys\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
-        "packagesPath": "C:\\Users\\tnaru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tnaru\\Desktop\\analizes bibys\\Sankabinis\\Sankabinis\\obj\\",
+        "projectPath": "C:\\Users\\myka\\Documents\\GitHub\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
+        "packagesPath": "C:\\Users\\myka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\myka\\Documents\\GitHub\\Sankabinis\\Sankabinis\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\tnaru\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\myka\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,17 +34,16 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.4, )"
@@ -84,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
