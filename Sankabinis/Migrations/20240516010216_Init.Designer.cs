@@ -12,7 +12,7 @@ using Sankabinis.Data;
 namespace Sankabinis.Migrations
 {
     [DbContext(typeof(SankabinisContext))]
-    [Migration("20240515222448_Init")]
+    [Migration("20240516010216_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -24,6 +24,29 @@ namespace Sankabinis.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Sankabinis.Models.Achievement", b =>
+                {
+                    b.Property<int>("Id_Pasiekimas")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Pasiekimas"));
+
+                    b.Property<string>("Aprasas")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("Pavadinimas")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.HasKey("Id_Pasiekimas");
+
+                    b.ToTable("pasiekimas");
+                });
 
             modelBuilder.Entity("Sankabinis.Models.Car", b =>
                 {

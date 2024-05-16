@@ -129,6 +129,7 @@ public class UserController : Controller
         loggedInUser.Patirtis = user.Patirtis;
         loggedInUser.Svoris = user.Svoris;
         loggedInUser.Gimimo_data = user.Gimimo_data;
+        loggedInUser.Lytis = user.Lytis;
 
         var city = _context.City.FirstOrDefault(c => c.Pavadinimas == cityPavadinimas);
         if (city != null)

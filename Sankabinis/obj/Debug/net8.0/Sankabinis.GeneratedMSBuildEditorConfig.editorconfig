@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\myka\Documents\GitHub\Sankabinis\Sankabinis
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/myka/Documents/GitHub/Sankabinis/Sankabinis/Views/Achievements/AchievementPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNoaWV2ZW1lbnRzXEFjaGlldmVtZW50UGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/myka/Documents/GitHub/Sankabinis/Sankabinis/Views/Cars/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
