@@ -37,8 +37,12 @@ namespace Sankabinis.Controllers
         {
             return View("~/Views/Leaders/LeaderPage.cshtml");
         }
-
+        public IActionResult NavigateToAchievementPage()
+        {
+            return View("~/Views/Achievements/AchievementPage.cshtml");
+        }
         
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

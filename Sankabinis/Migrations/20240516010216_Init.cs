@@ -79,6 +79,20 @@ namespace Sankabinis.Migrations
                 {
                     table.PrimaryKey("PK_naudotojas", x => x.Id_Naudotojas);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "pasiekimas",
+                columns: table => new
+                {
+                    Id_Pasiekimas = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Pavadinimas = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    Aprasas = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_pasiekimas", x => x.Id_Pasiekimas);
+                });
         }
 
         /// <inheritdoc />
@@ -92,6 +106,9 @@ namespace Sankabinis.Migrations
 
             migrationBuilder.DropTable(
                 name: "naudotojas");
+
+            migrationBuilder.DropTable(
+                name: "pasiekimas");
         }
     }
 }

@@ -1,0 +1,45 @@
+﻿@model List<Sankabinis.Models.Achievement>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Achievements - Sankabinis</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+
+    <h2>Achievements</h2>
+
+    <table class="table" id="achievementTable">
+        <thead>
+            <tr>
+                <th scope="col">Pavadinimas</th>
+                <th scope="col">Aprasas</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: '@Url.Action("ShowAchievementList", "Achievement")',
+                method: 'GET',
+                success: function (data) {
+                    $('#achievementTable tbody').empty();
+                    $.each(data, function (index, achievement) {
+                        $('#achievementTable tbody').append('<tr><td>' + achievement.pavadinimas + '</td><td>' + achievement.aprasas + '</td></tr>');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
