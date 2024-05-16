@@ -29,6 +29,10 @@ namespace Sankabinis.Controllers
         {
             return View("~/Views/User/ProfileCreationPage.cshtml");
         }
+        public IActionResult NavigateToProfilePage()
+        {
+            return View("~/Views/User/ProfilePage.cshtml");
+        }
         public IActionResult NavigateToLeaderPage()
         {
             return View("~/Views/Leaders/LeaderPage.cshtml");

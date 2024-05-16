@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sankabinis")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5975d0c9a5275df5fdff6a6cb2c0005e34cc21af")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d63a313ba8cc328df040c469b4f4b7d2b4427ff1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sankabinis")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sankabinis")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
