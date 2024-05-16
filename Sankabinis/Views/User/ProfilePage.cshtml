@@ -1,0 +1,74 @@
+﻿@model Sankabinis.Models.User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile - Sankabinis</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+
+    <h2>Profile Page</h2>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th scope="row">Full Name:</th>
+                <td id="fullName"></td>
+            </tr>
+            <tr>
+                <th scope="row">Email Address:</th>
+                <td id="emailAddress"></td>
+            </tr>
+            <tr>
+                <th scope="row">Gender:</th>
+                <td id="gender"></td>
+            </tr>
+            <tr>
+                <th scope="row">Date of Birth:</th>
+                <td id="dateOfBirth"></td>
+            </tr>
+            <tr>
+                <th scope="row">Experience:</th>
+                <td id="experience"></td>
+            </tr>
+            <tr>
+                <th scope="row">Weight:</th>
+                <td id="weight"></td>
+            </tr>
+            <tr>
+                <th scope="row">ELO:</th>
+                <td id="elo"></td>
+            </tr>
+            <tr>
+                <th scope="row">Respect Points:</th>
+                <td id="respect"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: '@Url.Action("ShowProfileData", "User")',
+                method: 'GET',
+                success: function (data) {
+                    $('#fullName').text(data.vardas_pavarde);
+                    $('#emailAddress').text(data.el_pastas);
+                    $('#gender').text(data.lytis);
+                    $('#dateOfBirth').text(data.gimimo_data);
+                    $('#experience').text(data.patirtis);
+                    $('#weight').text(data.svoris);
+                    $('#elo').text(data.elo);
+                    $('#respect').text(data.pasitikimo_taskai);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -90,8 +90,15 @@ public class UserController : Controller
 
     public IActionResult SignIn(User user, User existingUser)
     {
-        HttpContext.Session.SetString("Username", user.Slapyvardis);
-        HttpContext.Session.SetInt32("UserId", existingUser.Id_Naudotojas);
+        if (string.IsNullOrEmpty(existingUser.Lytis))
+        {
+            HttpContext.Session.SetInt32("UserId", existingUser.Id_Naudotojas);
+        }
+        else
+        {
+            HttpContext.Session.SetString("Username", user.Slapyvardis);
+            HttpContext.Session.SetInt32("UserId", existingUser.Id_Naudotojas);
+        }
         return Ok();    
     }
 
@@ -129,8 +136,16 @@ public class UserController : Controller
             loggedInUser.CityId = city.Id_Miestas;
         }
         _context.SaveChanges();
+        HttpContext.Session.SetString("Username", loggedInUser.Slapyvardis);
 
         return RedirectToAction("Index", "Home");
+    }
+
+    public IActionResult ShowProfileData()
+    {
+        var loggedInUserId = HttpContext.Session.GetInt32("UserId");
+        var user = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == loggedInUserId);
+        return Json(user);
     }
 
 
