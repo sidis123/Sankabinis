@@ -11,4 +11,11 @@
     {
         <p>Logged in as: @username</p>
     }
+
+    @if (!string.IsNullOrEmpty(ViewBag.Message))
+    {
+        <script>
+            alert('@ViewBag.Message');
+        </script>
+    }
 </div>

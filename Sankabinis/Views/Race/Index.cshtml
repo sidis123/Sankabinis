@@ -1,0 +1,137 @@
+﻿@model List<Sankabinis.Models.RaceOpponentViewModel>
+@using System.Text.Json
+
+@{
+    var username = Context.Session.GetString("Username");
+    var loggedInUserId = Context.Session.GetInt32("UserId");
+    var currentDistance = ViewBag.Distance ?? 0;
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+    currentDistance += 25;
+    <div class="text-center">
+        <a class="btn btn-primary btn-lg" asp-area="" asp-controller="Race" asp-action="BeginSearch" asp-route-distance="@currentDistance">Expand search distance</a>
+    </div>
+}
+else
+{
+    @if (Model != null && Model.Count > 0)
+    {
+        <div class="card-deck" id="race-cards">
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                var race = Model[i];
+                var opponent = race.Race.User1Id == loggedInUserId ? race.Race.User2Id : race.Race.User1Id;
+                var raceJson = JsonSerializer.Serialize(race.Race);
+
+                <div class="card" id="card-@i" style="display: @(i == 0 ? "block" : "none")">
+                    <div class="card-body">
+                        <h5 class="card-title">@race.Opponent.Slapyvardis</h5>
+                        <p class="card-text">Elo: @race.Opponent.Elo</p>
+                        <p class="card-text">Car Class: @race.Race.Automobilio_klase</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-success accept-button" data-race='@raceJson'>Accept</button>
+                        <button class="btn btn-danger reject-button" data-race='@raceJson'>Reject</button>
+                    </div>
+                </div>
+            }
+        </div>
+        <div id="no-more-cards" class="text-center" style="display: none;">
+            <p>No more opponents found within the current distance.</p>
+            <a class="btn btn-primary btn-lg" asp-area="" asp-controller="Race" asp-action="BeginSearch" asp-route-distance="@currentDistance + 25">Expand search distance</a>
+        </div>
+    }
+    else
+    {
+        <div class="text-center">
+            <a class="btn btn-primary btn-lg" asp-area="" asp-controller="Race" asp-action="BeginSearch" asp-route-distance="25">Begin Search</a>
+        </div>
+    }
+}
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('.accept-button').click(function () {
+                var raceJson = $(this).attr('data-race');
+                console.log("Race JSON:", raceJson); // Print JSON string to console
+                var race = JSON.parse(raceJson);
+                confirmRace(race);
+            });
+
+            $('.reject-button').click(function () {
+                var raceJson = $(this).attr('data-race');
+                console.log("Race JSON:", raceJson); // Print JSON string to console
+                var race = JSON.parse(raceJson);
+                disagreeToRace(race);
+            });
+
+            function confirmRace(race) {
+                $.ajax({
+                    url: '@Url.Action("ConfirmRace", "Race")',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(race),
+                    success: function (response) {
+                        if (response.action === "newRaceCreated") {
+                            // Logic to move to the next available card
+                            showNextCard();
+                        } else if (response.action === "existingRaceConfirmed") {
+                            // Logic for existing race confirmation
+                            handleExistingRaceConfirmation();
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        // Handle error
+                    }
+                });
+            }
+
+            function disagreeToRace(race) {
+                $.ajax({
+                    url: '@Url.Action("DisagreeToRace", "Race")',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(race),
+                    success: function (response) {
+                        showNextCard();
+                    },
+                    error: function (xhr, status, error) {
+                        // Handle error
+                    }
+                });
+            }
+
+            function showNextCard() {
+                var currentCard = $('.card:visible');
+                var nextCard = currentCard.next('.card');
+                if (nextCard.length > 0) {
+                    currentCard.hide();
+                    nextCard.show();
+                } else {
+                    $('#race-cards').hide();
+                    $('#no-more-cards').show();
+                }
+            }
+
+            function handleExistingRaceConfirmation() {
+                $.ajax({
+                    url: '@Url.Action("InitiateRace", "Race")',
+                    type: 'GET',
+                    success: function (response) {
+                        // Handle success response
+                        console.log("InitiateRace method called successfully.");
+                    },
+                    error: function (xhr, status, error) {
+                        // Handle error
+                        console.error("Error calling InitiateRace method:", error);
+                    }
+                });
+            }
+
+        });
+    </script>
+}
