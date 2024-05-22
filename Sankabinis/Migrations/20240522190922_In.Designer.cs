@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Sankabinis.Data;
 
@@ -11,9 +12,11 @@ using Sankabinis.Data;
 namespace Sankabinis.Migrations
 {
     [DbContext(typeof(SankabinisContext))]
-    partial class SankabinisContextModelSnapshot : ModelSnapshot
+    [Migration("20240522190922_In")]
+    partial class In
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

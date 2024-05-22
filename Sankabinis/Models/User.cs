@@ -56,5 +56,6 @@ namespace Sankabinis.Models
 
         [ForeignKey("City")]
         public int CityId { get; set; }
+        public int Level { get; set; }
     }
 }

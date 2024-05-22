@@ -56,6 +56,7 @@ public class UserController : Controller
         user.Lytis = "";
         user.Patirtis = "";
         user.Svoris = 0;
+        user.Level = 0;
 
         _context.Users.Add(user);
         _context.SaveChanges();
@@ -98,6 +99,7 @@ public class UserController : Controller
         {
             HttpContext.Session.SetString("Username", user.Slapyvardis);
             HttpContext.Session.SetInt32("UserId", existingUser.Id_Naudotojas);
+            HttpContext.Session.SetInt32("UserLevel", existingUser.Level);
         }
         return Ok();    
     }
@@ -138,6 +140,7 @@ public class UserController : Controller
         }
         _context.SaveChanges();
         HttpContext.Session.SetString("Username", loggedInUser.Slapyvardis);
+        HttpContext.Session.SetInt32("UserLevel", loggedInUser.Level);
 
         return RedirectToAction("Index", "Home");
     }
@@ -145,6 +148,7 @@ public class UserController : Controller
     public IActionResult ShowProfileData()
     {
         var loggedInUserId = HttpContext.Session.GetInt32("UserId");
+        var loggedInUserLevel = HttpContext.Session.GetInt32("UserLevel");
         var user = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == loggedInUserId);
         return Json(user);
     }
