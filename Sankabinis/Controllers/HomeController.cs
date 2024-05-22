@@ -15,6 +15,10 @@ namespace Sankabinis.Controllers
 
         public IActionResult Index()
         {
+            if (TempData.ContainsKey("Message"))
+            {
+                ViewBag.Message = TempData["Message"];
+            }
             return View();
         }
         public IActionResult NavigateToRegistrationPage()
@@ -41,7 +45,11 @@ namespace Sankabinis.Controllers
         {
             return View("~/Views/Achievements/AchievementPage.cshtml");
         }
-        
+
+        public IActionResult NavigateToRacePage()
+        {
+            return RedirectToAction("Index", "Race");
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
