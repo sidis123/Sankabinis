@@ -262,6 +262,100 @@ namespace Sankabinis.Controllers
 
 
         //}
+        [HttpPost]
+        public IActionResult RegisterResult(int userId, int result)
+        {
+            try
+            {
+                var race = _context.Race
+                    .Where(r => r.User1Id == userId || r.User2Id == userId)
+                    .FirstOrDefault();
+
+                if (race == null)
+                {
+                    return Json(new { success = false, message = "Race not found." });
+                }
+
+                if (race.User1Id == userId)
+                {
+                    race.rezultatas_pagal_pirmaji_naudotoja = result;
+                }
+                else if (race.User2Id == userId)
+                {
+                    race.rezultatas_pagal_antraji_naudotoja = result;
+                }
+
+                _context.SaveChanges();
+
+                if (race.rezultatas_pagal_pirmaji_naudotoja != 100 && race.rezultatas_pagal_antraji_naudotoja != 100) //cia padariau kad tipo kol nera ivestas rezultatas reikia kad defaultinis rezultatas butu 100 , o veliau jis keiciamas i 1 jei laimi arba i 0 jei pralaimi
+                {
+                    bool checkResult = CheckBothResults(race);
+                    if (checkResult)//kai grazina true
+                    {
+                        AddTrustScoreToBothCompetitors(race.User1Id, race.User2Id);
+                        //Recalculate Elo
+                        //Recalculate the experience level
+                        InformRacersOfEndOfMatch(race.User1Id, race.User2Id);
+                        //toliau su achievementais ir tt.... test darba
+                    }
+                }
+
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
+        private bool CheckBothResults(Race race)
+        {
+            var lenktynes = _context.Race
+                .FirstOrDefault(r => r.Id_Lenktynes == race.Id_Lenktynes);
+
+            if (lenktynes == null)
+            {
+                // Handle the case where the lenktynes record is not found
+                return false;
+            }
+
+            // Compare the results
+            if (lenktynes.rezultatas_pagal_pirmaji_naudotoja != lenktynes.rezultatas_pagal_antraji_naudotoja)
+            {
+                return true;//true jei geri rezultatai ir niekas nesukciavo
+            }
+
+            return false;//false, jei kazkas sukciavo ir ivede bloga rezultata
+        }
+
+        private void AddTrustScoreToBothCompetitors(int user1Id, int user2Id)
+        {
+            var user1 = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == user1Id);
+            var user2 = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == user2Id);
+
+            if (user1 != null && user2 != null)
+            {
+                user1.Pasitikimo_taskai++;
+                user2.Pasitikimo_taskai++;
+                _context.SaveChanges();
+            }
+        }
+
+        private void InformRacersOfEndOfMatch(int user1Id, int user2Id)
+        {
+            var user1 = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == user1Id);
+            var user2 = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == user2Id);
+
+            if (user1 != null && user2 != null)
+            {
+                // Send notification to user1
+                // For example: user1.SendNotification("Your match has ended.");
+
+                // Send notification to user2
+                // For example: user2.SendNotification("Your match has ended.");
+
+                // You can implement your notification mechanism here
+            }
+        }
 
     }
 }

@@ -15,15 +15,15 @@ else
     <div class="form-group">
         <form id="matchForm">
             <div class="form-check">
-                <input type="radio" name="result" id="won" value="I won the race" class="form-check-input" />
+                <input type="radio" name="result" id="won" value="1" class="form-check-input" />
                 <label class="form-check-label" for="won">I won the race</label>
             </div>
             <div class="form-check">
-                <input type="radio" name="result" id="lost" value="I lost the race" class="form-check-input" />
+                <input type="radio" name="result" id="lost" value="0" class="form-check-input" />
                 <label class="form-check-label" for="lost">I lost the race</label>
             </div>
             <div>
-                <button type="button" id="submitResult" class="btn btn-primary">Submit Result</button>
+                <button type="button" id="submitResult" class="btn btn-primary" disabled>Submit Result</button>
             </div>
         </form>
     </div>
@@ -31,5 +31,47 @@ else
 
 @section Scripts {
     <script>
+        $(document).ready(function () {
+            // Disable the submit button initially
+            $('#submitResult').prop('disabled', true);
+
+            // Enable the submit button when a radio button is selected
+            $('input[name="result"]').change(function () {
+                $('#submitResult').prop('disabled', false);
+            });
+
+            $('#submitResult').click(function () {
+                // Get the value of the selected radio button
+                var selectedResult = $('input[name="result"]:checked').val();
+                // Get the logged-in user ID from the server-side variable
+                var userId = '@loggedInUserId';
+
+                if (selectedResult === undefined) {
+                    // If no radio button is selected, alert the user
+                    alert('Please select a result.');
+                    return;
+                }
+
+                // Perform an Ajax POST request to the RegisterResult action in the RaceController
+                $.ajax({
+                    url: '@Url.Action("RegisterResult", "Race")',
+                    type: 'POST',
+                    data: {
+                        userId: userId,
+                        result: selectedResult
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            alert('Result registered successfully.');
+                        } else {
+                            alert('Failed to register result: ' + response.message);
+                        }
+                    },
+                    error: function () {
+                        alert('An error occurred while registering the result.');
+                    }
+                });
+            });
+        });
     </script>
 }
