@@ -253,15 +253,15 @@ namespace Sankabinis.Controllers
             return tracks[index];
         }
 
-        [HttpGet]
-        public IActionResult InitiateRace()
-        {
-            List<Track> tracks = _context.Track.ToList();
+        //[HttpGet]
+        //public IActionResult InitiateRace()
+        //{
+        //    List<Track> tracks = _context.Track.ToList();
 
-            Track track = ChooseRandomTrack(tracks);
+        //    Track track = ChooseRandomTrack(tracks);
 
 
-        }
+        //}
 
     }
 }

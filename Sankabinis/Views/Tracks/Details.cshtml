@@ -1,0 +1,97 @@
+﻿@model Sankabinis.Models.Car
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Car</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Marke)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Marke)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Modelis)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Modelis)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Numeris)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Numeris)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Galingumas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Galingumas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Spalva)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Spalva)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Rida)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Rida)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pagaminimo_data)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pagaminimo_data)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Svoris)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Svoris)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Kuro_tipas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Kuro_tipas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pavaru_deze)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pavaru_deze)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Kebulas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Kebulas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Klase)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Klase)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fk_Naudotojasid_Naudotojas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fk_Naudotojasid_Naudotojas)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Delete" asp-route-id="@Model?.Id_Automobilis">Delete</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.Id_Automobilis">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

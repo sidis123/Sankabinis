@@ -1,0 +1,71 @@
+﻿@model Sankabinis.Models.Track
+
+@{
+    ViewData["Title"] = "Create Track";
+}
+
+<h1>Create Track</h1>
+
+<h4>Track</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateTrack">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label class="control-label">City</label>
+                <select id="cityName" class="form-control" asp-items="@ViewBag.CityNames"></select>
+                <!-- Hidden input to store the selected city name -->
+                <input type="hidden" id="cityNameHidden" name="CityName" />
+                <span asp-validation-for="CityId" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label class="control-label">Start coordinates</label>
+                <input asp-for="start_coordinates" class="form-control" />
+                <span asp-validation-for="start_coordinates" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Finish coordinates</label>
+                <input asp-for="finish_coordinates" class="form-control" />
+                <span asp-validation-for="finish_coordinates" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Track name</label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Track picture (URL)</label>
+                <input asp-for="image" class="form-control" type="url" />
+                <span asp-validation-for="image" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        // Update hidden input with selected city name
+        $('#cityName').change(function () {
+            $('#cityNameHidden').val($(this).val());
+        });
+    </script>
+}

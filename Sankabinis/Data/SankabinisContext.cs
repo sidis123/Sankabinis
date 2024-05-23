@@ -18,5 +18,8 @@ namespace Sankabinis.Data
         public DbSet<User> Users { get; set; }
         public DbSet<City> City { get; set; }
         public DbSet<Achievement> Achievement { get; set; }
+        public DbSet<Distance> Distance { get; set; }
+        public DbSet <Race> Race { get; set; }
+        public DbSet <Track> Track {get; set; }
     }
 }
