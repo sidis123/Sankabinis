@@ -1,14 +1,32 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Configuration;
 using Sankabinis.Data;
+using Sankabinis.Controllers; // Assuming GoogleApiController is in a namespace called YourNamespace.GoogleApi
+
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<SankabinisContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("SankabinisContext") ?? throw new InvalidOperationException("Connection string 'SankabinisContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Configure configuration services
+var configBuilder = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddJsonFile("%APPDATA%\\Microsoft\\UserSecrets\\4012a855-361e-424b-bd4f-a21b60aaf802\\secrets.json", optional: true, reloadOnChange: true);
+
+// Build the configuration
+var configuration = configBuilder.Build();
+
+// Configure database context
+builder.Services.AddDbContext<SankabinisContext>(options =>
+    options.UseSqlServer(configuration.GetConnectionString("SankabinisContext") ?? throw new InvalidOperationException("Connection string 'SankabinisContext' not found.")));
+
+// Add session state
 builder.Services.AddSession();
+
+// Register GoogleApiController
+builder.Services.AddScoped<GoogleApiController>(); // Assuming GoogleApiController has no dependencies and can be created per request
 
 var app = builder.Build();
 
@@ -16,7 +34,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 

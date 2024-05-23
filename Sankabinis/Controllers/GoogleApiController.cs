@@ -21,62 +21,55 @@ namespace Sankabinis.Controllers
         public GoogleApiController(SankabinisContext context, IConfiguration configuration)
         {
             _context = context;
-            _googleApiKey = configuration["GoogleApiKey"];
+            _googleApiKey = "";
         }
 
         public async Task<IActionResult> FindDistance(City city)
         {
-            var cities = _context.City.ToList();
+            var cities = _context.City.Where(c => c.Id_Miestas != city.Id_Miestas).ToList();
 
-            // Create lists to store origins and destinations
-            var origins = new List<LocationEx> { new LocationEx(new Address(city.Pavadinimas)) };
-            var destinations = cities.Select(c => new LocationEx(new Address(c.Pavadinimas))).ToList();
+            var origin = new LocationEx(new Address(city.Pavadinimas));
 
-            var request = new DistanceMatrixRequest
+            foreach (var destinationCity in cities)
             {
-                Key = _googleApiKey,
-                Origins = origins,
-                Destinations = destinations
-            };
-
-            var response = await GoogleApi.GoogleMaps.DistanceMatrix.QueryAsync(request);
-
-            if (response.Status == Status.Ok && response.Rows.Any())
-            {
-                var rows = response.Rows.ToList();
-
-                for (int i = 0; i < rows.Count; i++)
+                // Check if distance already exists in the database
+                if (!_context.Distance.Any(d => d.CityId1 == city.Id_Miestas && d.CityId2 == destinationCity.Id_Miestas))
                 {
-                    var row = rows[i];
-                    var cityToMeasure = cities[i];
-
-                    for (int j = 0; j < row.Elements.Count(); j++)
+                    var request = new DistanceMatrixRequest
                     {
-                        var element = row.Elements.ToList()[j];
+                        Key = _googleApiKey,
+                        Origins = new List<LocationEx> { origin },
+                        Destinations = new List<LocationEx> { new LocationEx(new Address(destinationCity.Pavadinimas)) }
+                    };
 
-                        if (element.Status == Status.Ok)
+                    var response = await GoogleApi.GoogleMaps.DistanceMatrix.QueryAsync(request);
+
+                    if (response.Status == Status.Ok && response.Rows.Any())
+                    {
+                        var row = response.Rows.First();
+                        var element = row.Elements.FirstOrDefault();
+
+                        if (element != null && element.Status == Status.Ok)
                         {
-                            var distanceText = element.Distance.Text;
                             // Create and add Distance entity to the context
                             var distance = new Sankabinis.Models.Distance
                             {
                                 CityId1 = city.Id_Miestas, // Assuming city.Id is the ID of the origin city
-                                CityId2 = cityToMeasure.Id_Miestas, // Assuming cityToMeasure.Id is the ID of the destination city
-                                Atstumas = element.Distance.Value
+                                CityId2 = destinationCity.Id_Miestas, // Assuming destinationCity.Id is the ID of the destination city
+                                Atstumas = element.Distance.Value / 1000
                             };
 
                             _context.Add(distance);
                         }
                     }
                 }
-
-                // Save all changes to the database
-                await _context.SaveChangesAsync();
-
-                return Ok("Distances calculated and saved successfully.");
             }
 
-            return BadRequest("Failed to calculate distances.");
+            // Save all changes to the database
+            await _context.SaveChangesAsync();
+
+            return Ok("Distances calculated and saved successfully.");
         }
+
     }
 }
