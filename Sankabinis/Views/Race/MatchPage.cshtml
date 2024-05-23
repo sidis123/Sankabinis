@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Match";
+    var username = Context.Session.GetString("Username");
+    var loggedInUserId = Context.Session.GetInt32("UserId");
+}
+
+<h2>Match</h2>
+
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+}
+else
+{
+    <div class="form-group">
+        <form id="matchForm">
+            <div class="form-check">
+                <input type="radio" name="result" id="won" value="I won the race" class="form-check-input" />
+                <label class="form-check-label" for="won">I won the race</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" name="result" id="lost" value="I lost the race" class="form-check-input" />
+                <label class="form-check-label" for="lost">I lost the race</label>
+            </div>
+            <div>
+                <button type="button" id="submitResult" class="btn btn-primary">Submit Result</button>
+            </div>
+        </form>
+    </div>
+}
+
+@section Scripts {
+    <script>
+    </script>
+}
