@@ -3,12 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\controllers\\racecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\controllers\\racecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\views\\race\\matchpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\race\\matchpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\controllers\\racecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\controllers\\racecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\models\\race.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\models\\race.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\controllers\\leadercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\controllers\\leadercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\models\\achievement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\models\\achievement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\views\\achievements\\achievementpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\achievements\\achievementpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\views\\race\\matchlistpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\race\\matchlistpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,14 +51,6 @@
       "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\views\\race\\matchlistpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\race\\matchlistpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\models\\raceopponentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\models\\raceopponentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -41,14 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\models\\achievement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\models\\achievement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\models\\race.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\models\\race.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\models\\complaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -73,10 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\controllers\\leadercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\controllers\\leadercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\views\\leaders\\leaderpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -127,10 +135,6 @@
       "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\views\\cars\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|c:\\users\\tnaru\\desktop\\naujausiasananalas1\\sankabinis\\sankabinis\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E14B0DEB-9D97-4A4C-8779-E6B13DA3F2D8}|Sankabinis\\Sankabinis.csproj|solutionrelative:sankabinis\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -159,60 +163,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RaceController.cs",
-              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Controllers\\RaceController.cs",
-              "RelativeDocumentMoniker": "Sankabinis\\Controllers\\RaceController.cs",
-              "ToolTip": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Controllers\\RaceController.cs",
-              "RelativeToolTip": "Sankabinis\\Controllers\\RaceController.cs",
-              "ViewState": "AQIAABQBAAAAAAAAAAAmwCcBAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T20:31:22.069Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Sankabinis\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Sankabinis\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T00:42:52.331Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Complaint.cs",
-              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Models\\Complaint.cs",
-              "RelativeDocumentMoniker": "Sankabinis\\Models\\Complaint.cs",
-              "ToolTip": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Models\\Complaint.cs",
-              "RelativeToolTip": "Sankabinis\\Models\\Complaint.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T15:57:29.513Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "MatchPage.cshtml",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Views\\Race\\MatchPage.cshtml",
               "RelativeDocumentMoniker": "Sankabinis\\Views\\Race\\MatchPage.cshtml",
               "ToolTip": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Views\\Race\\MatchPage.cshtml",
               "RelativeToolTip": "Sankabinis\\Views\\Race\\MatchPage.cshtml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAcwEoAAAAAAAAA",
+              "ViewState": "AQIAADQAAAAAAAAAAAAgwGMAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-23T15:47:52.636Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Models\\User.cs",
               "RelativeDocumentMoniker": "Sankabinis\\Models\\User.cs",
@@ -224,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "Achievement.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Models\\Achievement.cs",
               "RelativeDocumentMoniker": "Sankabinis\\Models\\Achievement.cs",
@@ -232,11 +200,12 @@
               "RelativeToolTip": "Sankabinis\\Models\\Achievement.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T08:48:29.74Z"
+              "WhenOpened": "2024-05-24T08:48:29.74Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "RaceOpponentViewModel.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Models\\RaceOpponentViewModel.cs",
               "RelativeDocumentMoniker": "Sankabinis\\Models\\RaceOpponentViewModel.cs",
@@ -248,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Sankabinis\\Views\\Shared\\_Layout.cshtml",
@@ -256,23 +225,89 @@
               "RelativeToolTip": "Sankabinis\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAAE0AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-22T19:12:57.677Z"
+              "WhenOpened": "2024-04-22T19:12:57.677Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MatchListPage.cshtml",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Views\\Race\\MatchListPage.cshtml",
               "RelativeDocumentMoniker": "Sankabinis\\Views\\Race\\MatchListPage.cshtml",
               "ToolTip": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Views\\Race\\MatchListPage.cshtml",
               "RelativeToolTip": "Sankabinis\\Views\\Race\\MatchListPage.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAA4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-24T09:14:18.986Z"
+              "WhenOpened": "2024-05-24T09:14:18.986Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
+              "Title": "RaceController.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Controllers\\RaceController.cs",
+              "RelativeDocumentMoniker": "Sankabinis\\Controllers\\RaceController.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Controllers\\RaceController.cs",
+              "RelativeToolTip": "Sankabinis\\Controllers\\RaceController.cs",
+              "ViewState": "AQIAAB4BAAAAAAAAAAD4vywBAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T20:31:22.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LeaderController.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Controllers\\LeaderController.cs",
+              "RelativeDocumentMoniker": "Sankabinis\\Controllers\\LeaderController.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Controllers\\LeaderController.cs",
+              "RelativeToolTip": "Sankabinis\\Controllers\\LeaderController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T09:40:26.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AchievementPage.cshtml",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Views\\Achievements\\AchievementPage.cshtml",
+              "RelativeDocumentMoniker": "Sankabinis\\Views\\Achievements\\AchievementPage.cshtml",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Views\\Achievements\\AchievementPage.cshtml",
+              "RelativeToolTip": "Sankabinis\\Views\\Achievements\\AchievementPage.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-24T13:38:19.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Race.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Models\\Race.cs",
+              "RelativeDocumentMoniker": "Sankabinis\\Models\\Race.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Models\\Race.cs",
+              "RelativeToolTip": "Sankabinis\\Models\\Race.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAIwA0AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T15:49:44.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Complaint.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Models\\Complaint.cs",
+              "RelativeDocumentMoniker": "Sankabinis\\Models\\Complaint.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Models\\Complaint.cs",
+              "RelativeToolTip": "Sankabinis\\Models\\Complaint.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T15:57:29.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "AchievementController.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Controllers\\AchievementController.cs",
               "RelativeDocumentMoniker": "Sankabinis\\Controllers\\AchievementController.cs",
@@ -284,7 +319,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Sankabinis\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Sankabinis\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T00:42:52.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Program.cs",
+              "RelativeDocumentMoniker": "Sankabinis\\Program.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Program.cs",
+              "RelativeToolTip": "Sankabinis\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB8AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T19:01:49.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "City.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Models\\City.cs",
               "RelativeDocumentMoniker": "Sankabinis\\Models\\City.cs",
@@ -296,7 +356,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "CityJson.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Models\\CityJson.cs",
               "RelativeDocumentMoniker": "Sankabinis\\Models\\CityJson.cs",
@@ -308,7 +368,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Sankabinis\\Controllers\\UserController.cs",
@@ -320,19 +380,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Race.cs",
-              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Models\\Race.cs",
-              "RelativeDocumentMoniker": "Sankabinis\\Models\\Race.cs",
-              "ToolTip": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Models\\Race.cs",
-              "RelativeToolTip": "Sankabinis\\Models\\Race.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAD4vyMAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T15:49:44.812Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "CarsController.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Controllers\\CarsController.cs",
               "RelativeDocumentMoniker": "Sankabinis\\Controllers\\CarsController.cs",
@@ -344,19 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "LeaderController.cs",
-              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Controllers\\LeaderController.cs",
-              "RelativeDocumentMoniker": "Sankabinis\\Controllers\\LeaderController.cs",
-              "ToolTip": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Controllers\\LeaderController.cs",
-              "RelativeToolTip": "Sankabinis\\Controllers\\LeaderController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T09:40:26.123Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Sankabinis\\Views\\Home\\Privacy.cshtml",
@@ -368,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Sankabinis\\Views\\Home\\Index.cshtml",
@@ -380,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Views\\Race\\Index.cshtml",
               "RelativeDocumentMoniker": "Sankabinis\\Views\\Race\\Index.cshtml",
@@ -392,7 +428,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "LeaderPage.cshtml",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Views\\Leaders\\LeaderPage.cshtml",
               "RelativeDocumentMoniker": "Sankabinis\\Views\\Leaders\\LeaderPage.cshtml",
@@ -404,7 +440,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "Car.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Models\\Car.cs",
               "RelativeDocumentMoniker": "Sankabinis\\Models\\Car.cs",
@@ -416,7 +452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "20240523163308_Init.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Migrations\\20240523163308_Init.cs",
               "RelativeDocumentMoniker": "Sankabinis\\Migrations\\20240523163308_Init.cs",
@@ -428,7 +464,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "SankabinisContext.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Data\\SankabinisContext.cs",
               "RelativeDocumentMoniker": "Sankabinis\\Data\\SankabinisContext.cs",
@@ -440,7 +476,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "Track.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Models\\Track.cs",
               "RelativeDocumentMoniker": "Sankabinis\\Models\\Track.cs",
@@ -452,7 +488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "20240523162645_Init.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Migrations\\20240523162645_Init.cs",
               "RelativeDocumentMoniker": "Sankabinis\\Migrations\\20240523162645_Init.cs",
@@ -464,7 +500,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "GoogleApiController.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Controllers\\GoogleApiController.cs",
               "RelativeDocumentMoniker": "Sankabinis\\Controllers\\GoogleApiController.cs",
@@ -476,7 +512,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Views\\Cars\\Index.cshtml",
               "RelativeDocumentMoniker": "Sankabinis\\Views\\Cars\\Index.cshtml",
@@ -488,7 +524,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\appsettings.json",
               "RelativeDocumentMoniker": "Sankabinis\\appsettings.json",
@@ -500,7 +536,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Views\\Cars\\Create.cshtml",
               "RelativeDocumentMoniker": "Sankabinis\\Views\\Cars\\Create.cshtml",
@@ -512,7 +548,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "20240514235140_Init.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\analo kanalas1\\Sankabinis\\Sankabinis\\Migrations\\20240514235140_Init.cs",
               "RelativeDocumentMoniker": "..\\..\\analo kanalas1\\Sankabinis\\Sankabinis\\Migrations\\20240514235140_Init.cs",
@@ -524,19 +560,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Program.cs",
-              "RelativeDocumentMoniker": "Sankabinis\\Program.cs",
-              "ToolTip": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Program.cs",
-              "RelativeToolTip": "Sankabinis\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T19:01:49.158Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Views\\Cars\\Delete.cshtml",
               "RelativeDocumentMoniker": "Sankabinis\\Views\\Cars\\Delete.cshtml",
@@ -548,7 +572,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Views\\Cars\\Details.cshtml",
               "RelativeDocumentMoniker": "Sankabinis\\Views\\Cars\\Details.cshtml",
@@ -560,7 +584,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Sankabinis\\Models\\ErrorViewModel.cs",
@@ -572,7 +596,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Views\\Cars\\Edit.cshtml",
               "RelativeDocumentMoniker": "Sankabinis\\Views\\Cars\\Edit.cshtml",
@@ -584,7 +608,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "20240423024517_RemovedWaterMarksAndEtc.cs",
               "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Migrations\\20240423024517_RemovedWaterMarksAndEtc.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Migrations\\20240423024517_RemovedWaterMarksAndEtc.cs",
@@ -596,7 +620,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "Sankabinis\\Views\\_ViewImports.cshtml",
@@ -608,7 +632,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "20240422192016_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Migrations\\20240422192016_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Gustas\\Desktop\\PSA\\dotnet8\\Sankabinis\\Sankabinis\\Migrations\\20240422192016_InitialCreate.cs",

@@ -293,41 +293,41 @@ namespace Sankabinis.Controllers
                         AddTrustScoreToBothCompetitors(race.User1Id, race.User2Id);
                         //Recalculate Elo
                         //Recalculate the experience level
-                        InformRacersOfEndOfMatch(race.User1Id, race.User2Id);
+                        InformRacersOfEndOfMatch(race.Id_Lenktynes);//kad parodyti kuris laimejo screena turi but finished true ir final true 
                         //achievementai
                         //tikrinam ar gavo nauju achievementu
                         //jeigu gavo ifas
                     }
-                    else//po rezultatu patikros rezultatai nesutapo (ty.kazkas pamelavo)
-                    {
-                        int m = CheckTrustScoreDifference(race.User1Id, race.User2Id);
-                        if (m > 30)//kadangi trust score zenkliai skiriasi , darom skunda
-                        {
-                            // Get data about the race
-                            var raceData = GetDataAboutRace(race.Id_Lenktynes);
+                    //else//po rezultatu patikros rezultatai nesutapo (ty.kazkas pamelavo)
+                    //{
+                    //    int m = CheckTrustScoreDifference(race.User1Id, race.User2Id);
+                    //    if (m > 30)//kadangi trust score zenkliai skiriasi , darom skunda
+                    //    {
+                    //        // Get data about the race
+                    //        var raceData = GetDataAboutRace(race.Id_Lenktynes);
 
-                            // Get data about the racers
-                            var racerData = GetDataAboutRacers(race.User1Id, race.User2Id);
+                    //        // Get data about the racers
+                    //        var racerData = GetDataAboutRacers(race.User1Id, race.User2Id);
 
-                            // Call the CreateAppeal method
-                            if (raceData != null && racerData.Item1 != null && racerData.Item2 != null)
-                            {
-                                CreateAppeal(raceData, racerData.Item1, racerData.Item2);
-                                InformRacersOfAppeal(racerData.Item1, racerData.Item2);
-                            }
-                        }
-                        else//priskiriam pergale naudotojui su didesniu trust score
-                        {
-                            DeclareVictor(race.User1Id, race.User2Id, race.Id_Lenktynes);
-                            //recalculate Elo
-                            //recalculate the experience level
-                            InformRacersOfEndOfMatch(race.User1Id, race.User2Id);
-                            //achievementai
-                            //tikrinam ar gavo nauju achievements
-                            //jeigu gavo iffas
-                        }
+                    //        // Call the CreateAppeal method
+                    //        if (raceData != null && racerData.Item1 != null && racerData.Item2 != null)
+                    //        {
+                    //            CreateAppeal(raceData, racerData.Item1, racerData.Item2);
+                    //            InformRacersOfAppeal(racerData.Item1, racerData.Item2);
+                    //        }
+                    //    }
+                    //    else//priskiriam pergale naudotojui su didesniu trust score
+                    //    {
+                    //        DeclareVictor(race.User1Id, race.User2Id, race.Id_Lenktynes);
+                    //        //recalculate Elo
+                    //        //recalculate the experience level
+                    //        InformRacersOfEndOfMatch(race.Id_Lenktynes);
+                    //        //achievementai
+                    //        //tikrinam ar gavo nauju achievements
+                    //        //jeigu gavo iffas
+                    //    }
 
-                    }
+                    //}
                 }
 
                 return Json(new { success = true });
@@ -351,7 +351,7 @@ namespace Sankabinis.Controllers
                 var race = _context.Race.FirstOrDefault(r => r.Id_Lenktynes == raceId);
                 if (race != null)
                 {
-                    race.ar_lenktynes_pasibaigusios = true;
+                    //race.ar_lenktynes_pasibaigusios = true;
                     race.rezultatas_pagal_pirmaji_naudotoja = user1Won ? 1 : 0;
                     race.rezultatas_pagal_antraji_naudotoja = user1Won ? 0 : 1;
                     _context.SaveChanges();
@@ -396,16 +396,31 @@ namespace Sankabinis.Controllers
             }
         }
 
-        private void InformRacersOfEndOfMatch(int user1Id, int user2Id)
+        private void InformRacersOfEndOfMatch(int lenktyniuId)
         {
-            var user1 = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == user1Id);
-            var user2 = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == user2Id);
+            try
+            {
+                // Retrieve the race based on its ID
+                var race = _context.Race.FirstOrDefault(r => r.Id_Lenktynes == lenktyniuId);
+                if (race != null)
+                {
+                    // Set ar_lenktynes_pasibaigusios to true
+                    race.ar_lenktynes_pasibaigusios = true;
 
-           // if (user1 != null && user2 != null)
-            //{
-                TempData["NotificationMessage"] = "Your race has ended.";
-
-            //}
+                    // Save the changes to the database
+                    _context.SaveChanges();
+                }
+                else
+                {
+                    // Handle the case where the race is not found
+                    Console.WriteLine("Race not found with ID: " + lenktyniuId);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions
+                Console.WriteLine("Error in informing racers of the end of the match: " + ex.Message);
+            }
         }
         private void InformRacersOfAppeal(User racer1, User racer2)
         {
@@ -445,7 +460,7 @@ namespace Sankabinis.Controllers
                 return 0;
             }
         }
-        private Race GetDataAboutRace(int raceId)
+        public Race GetDataAboutRace(int raceId)
         {
             try
             {
@@ -457,6 +472,21 @@ namespace Sankabinis.Controllers
             {
                 // Handle any exceptions
                 Console.WriteLine("Error in getting data about the race: " + ex.Message);
+                return null;
+            }
+        }
+        public User GetDataAboutRacer(int id)
+        {
+            try
+            {
+                // Retrieve data about the race based on its ID
+                var user = _context.Users.FirstOrDefault(r => r.Id_Naudotojas == id);
+                return user;
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions
+                Console.WriteLine("Error in getting data about the user: " + ex.Message);
                 return null;
             }
         }
@@ -503,7 +533,6 @@ namespace Sankabinis.Controllers
         [HttpPost]
         public IActionResult MatchPage(int raceId, int loggedInUserId)
         {
-            InformRacersOfEndOfMatch(1, 1);
             Console.WriteLine("Informavome apie lenktyniu baigti");
             ViewBag.RaceId = raceId;
             ViewBag.LoggedInUserId = loggedInUserId;
