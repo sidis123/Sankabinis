@@ -1,10 +1,11 @@
 ﻿@{
     ViewBag.Title = "Match";
+    var raceId = ViewBag.RaceId;
+    var loggedInUserId = ViewBag.LoggedInUserId;
     var username = Context.Session.GetString("Username");
-    var loggedInUserId = Context.Session.GetInt32("UserId");
 }
 
-<h2>Match</h2>
+<h2>Race ID: @raceId</h2>
 
 @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
 {
@@ -32,33 +33,29 @@ else
 @section Scripts {
     <script>
         $(document).ready(function () {
-            // Disable the submit button initially
             $('#submitResult').prop('disabled', true);
 
-            // Enable the submit button when a radio button is selected
             $('input[name="result"]').change(function () {
                 $('#submitResult').prop('disabled', false);
             });
 
             $('#submitResult').click(function () {
-                // Get the value of the selected radio button
                 var selectedResult = $('input[name="result"]:checked').val();
-                // Get the logged-in user ID from the server-side variable
                 var userId = '@loggedInUserId';
+                var raceId = '@raceId';
 
                 if (selectedResult === undefined) {
-                    // If no radio button is selected, alert the user
                     alert('Please select a result.');
                     return;
                 }
 
-                // Perform an Ajax POST request to the RegisterResult action in the RaceController
                 $.ajax({
                     url: '@Url.Action("RegisterResult", "Race")',
                     type: 'POST',
                     data: {
                         userId: userId,
-                        result: selectedResult
+                        result: selectedResult,
+                        raceId: raceId
                     },
                     success: function (response) {
                         if (response.success) {

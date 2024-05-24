@@ -1308,3 +1308,6 @@ C:\Users\tnaru\Desktop\NaujausiasAnanalas1\Sankabinis\Sankabinis\obj\Debug\net8.
 C:\Users\tnaru\Desktop\NaujausiasAnanalas1\Sankabinis\Sankabinis\obj\Debug\net8.0\Sankabinis.pdb
 C:\Users\tnaru\Desktop\NaujausiasAnanalas1\Sankabinis\Sankabinis\obj\Debug\net8.0\Sankabinis.genruntimeconfig.cache
 C:\Users\tnaru\Desktop\NaujausiasAnanalas1\Sankabinis\Sankabinis\obj\Debug\net8.0\ref\Sankabinis.dll
+C:\Users\tnaru\Desktop\NaujausiasAnanalas1\Sankabinis\Sankabinis\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\tnaru\Desktop\NaujausiasAnanalas1\Sankabinis\Sankabinis\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\tnaru\Desktop\NaujausiasAnanalas1\Sankabinis\Sankabinis\bin\Debug\net8.0\Microsoft.Extensions.Features.dll

@@ -1,0 +1,80 @@
+﻿@using Sankabinis.Data
+@using Sankabinis.Models
+@inject SankabinisContext _context
+
+@{
+    ViewBag.Title = "All User's Races";
+    var loggedInUserId = Context.Session.GetInt32("UserId");
+    List<Race> userRaces = new List<Race>();
+
+    if (loggedInUserId != null)
+    {
+        userRaces = _context.Race
+            .Where(r => r.User1Id == loggedInUserId || r.User2Id == loggedInUserId)
+            .ToList();
+    }
+}
+
+<h2>All User's Races</h2>
+
+@if (loggedInUserId == null)
+{
+    <div class="alert alert-warning">You must be logged in to view your races.</div>
+}
+else
+{
+    @if (!userRaces.Any())
+    {
+        <div class="alert alert-info">No races found for the current user.</div>
+    }
+    else
+    {
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Race ID</th>
+                    <th>User 1</th>
+                    <th>User 2</th>
+                    <th>First User Confirmation</th>
+                    <th>Second User Confirmation</th>
+                    <th>Car Class</th>
+                    <th>Suggested Time</th>
+                    <th>Is Time Confirmed</th>
+                    <th>Are Races Finished</th>
+                    <th>Result by First User</th>
+                    <th>Result by Second User</th>
+                    <th>Is Final Result</th>
+                    <th>Track ID</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var race in userRaces)
+                {
+                    <tr>
+                        <td>@race.Id_Lenktynes</td>
+                        <td>@race.User1Id</td>
+                        <td>@race.User2Id</td>
+                        <td>@race.Pirmo_naudotojo_patvirtinimas</td>
+                        <td>@race.Antro_naudotojo_patvirtinimas</td>
+                        <td>@race.Automobilio_klase</td>
+                        <td>@race.pasiulytas_laikas</td>
+                        <td>@race.ar_laikas_patvirtintas</td>
+                        <td>@race.ar_lenktynes_pasibaigusios</td>
+                        <td>@race.rezultatas_pagal_pirmaji_naudotoja</td>
+                        <td>@race.rezultatas_pagal_antraji_naudotoja</td>
+                        <td>@race.ar_galutinis_rezultatas</td>
+                        <td>@race.TrackId</td>
+                        <td>
+                            <form method="post" action="@Url.Action("MatchPage", "Race")">
+                                <input type="hidden" name="raceId" value="@race.Id_Lenktynes" />
+                                <input type="hidden" name="loggedInUserId" value="@loggedInUserId" />
+                                <button type="submit" class="btn btn-primary">Go To Race</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}
