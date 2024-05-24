@@ -24,89 +24,97 @@ else
                 url: '@Url.Action("GetDataAboutRace", "Race", new { raceId = raceId })',
                 type: 'GET',
                 success: function (race) {
-                    if (race && race.ar_lenktynes_pasibaigusios) {
-                        var winnerId = "";
-                        if (race.rezultatas_pagal_pirmaji_naudotoja == 1 && race.rezultatas_pagal_antraji_naudotoja != 1) {
-                            winnerId = race.user1Id;
-                        } else if (race.rezultatas_pagal_antraji_naudotoja == 1 && race.rezultatas_pagal_pirmaji_naudotoja != 1) {
-                            winnerId = race.user2Id;
-                        }
-
-                        if (winnerId) {
-                            // Fetch winner details
-                            $.ajax({
-                                url: '@Url.Action("GetDataAboutRacer", "Race")',
-                                type: 'GET',
-                                data: { id: winnerId },
-                                success: function (user) {
-                                    if (user) {
-                                        $('#raceStatus').html('<h2>The race has ended</h2><p>The winner is: ' + user.vardas_pavarde + '</p>');
-                                    } else {
-                                        $('#raceStatus').html('<h2>The race has ended</h2><p>The winner is: ' + winnerId + ' (user details not found)</p>');
-                                    }
-                                },
-                                error: function () {
-                                    $('#raceStatus').html('<h2>The race has ended</h2><p>An error occurred while fetching the winner details.</p>');
+                    if (race) {
+                        if (race.ar_lenktynes_pasibaigusios) {
+                            if (race.ar_galutinis_rezultatas) {
+                                var winnerId = "";
+                                if (race.rezultatas_pagal_pirmaji_naudotoja == 1 && race.rezultatas_pagal_antraji_naudotoja != 1) {
+                                    winnerId = race.user1Id;
+                                } else if (race.rezultatas_pagal_antraji_naudotoja == 1 && race.rezultatas_pagal_pirmaji_naudotoja != 1) {
+                                    winnerId = race.user2Id;
                                 }
-                            });
+
+                                if (winnerId) {
+                                    // Fetch winner details
+                                    $.ajax({
+                                        url: '@Url.Action("GetDataAboutRacer", "Race")',
+                                        type: 'GET',
+                                        data: { id: winnerId },
+                                        success: function (user) {
+                                            if (user) {
+                                                $('#raceStatus').html('<h2>The race has ended</h2><p>The winner is: ' + user.vardas_pavarde + '</p>');
+                                            } else {
+                                                $('#raceStatus').html('<h2>The race has ended</h2><p>The winner is: ' + winnerId + ' (user details not found)</p>');
+                                            }
+                                        },
+                                        error: function () {
+                                            $('#raceStatus').html('<h2>The race has ended</h2><p>An error occurred while fetching the winner details.</p>');
+                                        }
+                                    });
+                                } else {
+                                    $('#raceStatus').html('<h2>The race has ended</h2><p>No winner determined.</p>');
+                                }
+                            } else {
+                                $('#raceStatus').html('<h2>The race has ended</h2><p>One of the racers was unhonest.An appeal was created, please wait while the admin approves the final score.</p>');
+                            }
                         } else {
-                            $('#raceStatus').html('<h2>The race has ended</h2><p>No winner determined.</p>');
+                            // Race is still ongoing, show the form
+                            $('#raceStatus').html('<div class="form-group">' +
+                                '<form id="matchForm">' +
+                                '<div class="form-check">' +
+                                '<input type="radio" name="result" id="won" value="1" class="form-check-input" />' +
+                                '<label class="form-check-label" for="won">I won the race</label>' +
+                                '</div>' +
+                                '<div class="form-check">' +
+                                '<input type="radio" name="result" id="lost" value="0" class="form-check-input" />' +
+                                '<label class="form-check-label" for="lost">I lost the race</label>' +
+                                '</div>' +
+                                '<div>' +
+                                '<button type="button" id="submitResult" class="btn btn-primary" disabled>Submit Result</button>' +
+                                '</div>' +
+                                '</form>' +
+                                '</div>');
+
+                            // Enable/disable submit button based on radio selection
+                            $('input[name="result"]').change(function () {
+                                $('#submitResult').prop('disabled', false);
+                            });
+
+                            // Submit result
+                            $('#submitResult').click(function () {
+                                var selectedResult = $('input[name="result"]:checked').val();
+
+                                // Perform validation if a result is selected
+                                if (selectedResult === undefined) {
+                                    alert('Please select a result.');
+                                    return;
+                                }
+
+                                // AJAX call to submit result
+                                $.ajax({
+                                    url: '@Url.Action("RegisterResult", "Race")',
+                                    type: 'POST',
+                                    data: {
+                                        userId: '@loggedInUserId',
+                                        result: selectedResult,
+                                        raceId: '@raceId'
+                                    },
+                                    success: function (response) {
+                                        if (response.success) {
+                                            alert('Result registered successfully.');
+                                            location.reload(); // Refresh the page
+                                        } else {
+                                            alert('Failed to register result: ' + response.message);
+                                        }
+                                    },
+                                    error: function () {
+                                        alert('An error occurred while registering the result.');
+                                    }
+                                });
+                            });
                         }
                     } else {
-                        // Race is still ongoing, show the form
-                        $('#raceStatus').html('<div class="form-group">' +
-                            '<form id="matchForm">' +
-                            '<div class="form-check">' +
-                            '<input type="radio" name="result" id="won" value="1" class="form-check-input" />' +
-                            '<label class="form-check-label" for="won">I won the race</label>' +
-                            '</div>' +
-                            '<div class="form-check">' +
-                            '<input type="radio" name="result" id="lost" value="0" class="form-check-input" />' +
-                            '<label class="form-check-label" for="lost">I lost the race</label>' +
-                            '</div>' +
-                            '<div>' +
-                            '<button type="button" id="submitResult" class="btn btn-primary" disabled>Submit Result</button>' +
-                            '</div>' +
-                            '</form>' +
-                            '</div>');
-
-                        // Enable/disable submit button based on radio selection
-                        $('input[name="result"]').change(function () {
-                            $('#submitResult').prop('disabled', false);
-                        });
-
-                        // Submit result
-                        $('#submitResult').click(function () {
-                            var selectedResult = $('input[name="result"]:checked').val();
-
-                            // Perform validation if a result is selected
-                            if (selectedResult === undefined) {
-                                alert('Please select a result.');
-                                return;
-                            }
-
-                            // AJAX call to submit result
-                            $.ajax({
-                                url: '@Url.Action("RegisterResult", "Race")',
-                                type: 'POST',
-                                data: {
-                                    userId: '@loggedInUserId',
-                                    result: selectedResult,
-                                    raceId: '@raceId'
-                                },
-                                success: function (response) {
-                                    if (response.success) {
-                                        alert('Result registered successfully.');
-                                        location.reload(); // Refresh the page
-                                    } else {
-                                        alert('Failed to register result: ' + response.message);
-                                    }
-                                },
-                                error: function () {
-                                    alert('An error occurred while registering the result.');
-                                }
-                            });
-                        });
+                        alert('Race data not found.');
                     }
                 },
                 error: function () {

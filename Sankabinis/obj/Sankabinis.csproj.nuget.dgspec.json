@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Sankabinis.csproj": {}
+    "C:\\Users\\tnaru\\Desktop\\Naujausias analinis seksas\\Sankabinis\\Sankabinis\\Sankabinis.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Sankabinis.csproj": {
+    "C:\\Users\\tnaru\\Desktop\\Naujausias analinis seksas\\Sankabinis\\Sankabinis\\Sankabinis.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
+        "projectUniqueName": "C:\\Users\\tnaru\\Desktop\\Naujausias analinis seksas\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
         "projectName": "Sankabinis",
-        "projectPath": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
+        "projectPath": "C:\\Users\\tnaru\\Desktop\\Naujausias analinis seksas\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
         "packagesPath": "C:\\Users\\tnaru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\obj\\",
+        "outputPath": "C:\\Users\\tnaru\\Desktop\\Naujausias analinis seksas\\Sankabinis\\Sankabinis\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
