@@ -1,20 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MSI\\Documents\\GitHub\\Sankabinis\\Sankabinis\\Sankabinis.csproj": {}
+    "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Sankabinis.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MSI\\Documents\\GitHub\\Sankabinis\\Sankabinis\\Sankabinis.csproj": {
+    "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Sankabinis.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MSI\\Documents\\GitHub\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
+        "projectUniqueName": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
         "projectName": "Sankabinis",
-        "projectPath": "C:\\Users\\MSI\\Documents\\GitHub\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MSI\\Documents\\GitHub\\Sankabinis\\Sankabinis\\obj\\",
+        "projectPath": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
+        "packagesPath": "C:\\Users\\tnaru\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tnaru\\Desktop\\NaujausiasAnanalas1\\Sankabinis\\Sankabinis\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tnaru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -46,9 +51,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "GoogleApi": {
+              "target": "Package",
+              "version": "[5.4.3, )"
+            },
             "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Common": {
+              "target": "Package",
+              "version": "[8.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",

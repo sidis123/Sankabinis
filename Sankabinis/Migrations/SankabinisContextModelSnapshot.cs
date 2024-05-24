@@ -128,6 +128,33 @@ namespace Sankabinis.Migrations
                     b.ToTable("miestas");
                 });
 
+            modelBuilder.Entity("Sankabinis.Models.Complaint", b =>
+                {
+                    b.Property<int>("Id_Skundas")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Skundas"));
+
+                    b.Property<int>("Id_Lenktynes")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Paaiskinimas")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<DateTime>("Sukurimo_Data")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Uzdarytas")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id_Skundas");
+
+                    b.ToTable("skundas");
+                });
+
             modelBuilder.Entity("Sankabinis.Models.Distance", b =>
                 {
                     b.Property<int>("Id_Atstumas")

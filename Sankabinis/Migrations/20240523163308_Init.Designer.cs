@@ -12,7 +12,7 @@ using Sankabinis.Data;
 namespace Sankabinis.Migrations
 {
     [DbContext(typeof(SankabinisContext))]
-    [Migration("20240516010216_Init")]
+    [Migration("20240523163308_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -131,6 +131,136 @@ namespace Sankabinis.Migrations
                     b.ToTable("miestas");
                 });
 
+            modelBuilder.Entity("Sankabinis.Models.Complaint", b =>
+                {
+                    b.Property<int>("Id_Skundas")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Skundas"));
+
+                    b.Property<int>("Id_Lenktynes")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Paaiskinimas")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<DateTime>("Sukurimo_Data")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Uzdarytas")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id_Skundas");
+
+                    b.ToTable("skundas");
+                });
+
+            modelBuilder.Entity("Sankabinis.Models.Distance", b =>
+                {
+                    b.Property<int>("Id_Atstumas")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Atstumas"));
+
+                    b.Property<double>("Atstumas")
+                        .HasColumnType("float");
+
+                    b.Property<int>("CityId1")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CityId2")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id_Atstumas");
+
+                    b.ToTable("atstumas");
+                });
+
+            modelBuilder.Entity("Sankabinis.Models.Race", b =>
+                {
+                    b.Property<int>("Id_Lenktynes")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Lenktynes"));
+
+                    b.Property<bool>("Antro_naudotojo_patvirtinimas")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Automobilio_klase")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Pirmo_naudotojo_patvirtinimas")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("TrackId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("User1Id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("User2Id")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("ar_galutinis_rezultatas")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("ar_laikas_patvirtintas")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("ar_lenktynes_pasibaigusios")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("pasiulytas_laikas")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("rezultatas_pagal_antraji_naudotoja")
+                        .HasColumnType("int");
+
+                    b.Property<int>("rezultatas_pagal_pirmaji_naudotoja")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id_Lenktynes");
+
+                    b.ToTable("lenktynes");
+                });
+
+            modelBuilder.Entity("Sankabinis.Models.Track", b =>
+                {
+                    b.Property<int>("Id_Trasa")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Trasa"));
+
+                    b.Property<int>("CityId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("finish_coordinates")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("start_coordinates")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id_Trasa");
+
+                    b.ToTable("trasa");
+                });
+
             modelBuilder.Entity("Sankabinis.Models.User", b =>
                 {
                     b.Property<int>("Id_Naudotojas")
@@ -162,6 +292,9 @@ namespace Sankabinis.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("Lenktyniu_skaicius")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Level")
                         .HasColumnType("int");
 
                     b.Property<string>("Lytis")

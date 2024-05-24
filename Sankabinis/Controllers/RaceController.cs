@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Sankabinis.Data;
 using Sankabinis.Models;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace Sankabinis.Controllers
@@ -262,6 +263,281 @@ namespace Sankabinis.Controllers
 
 
         //}
+        [HttpPost]
+        public IActionResult RegisterResult(int userId, int result, int raceId)
+        {
+            try
+            {
+                var race = _context.Race.FirstOrDefault(r => r.Id_Lenktynes == raceId && (r.User1Id == userId || r.User2Id == userId));
+
+                if (race == null)
+                {
+                    return Json(new { success = false, message = "Race not found." });
+                }
+
+                if (race.User1Id == userId)
+                {
+                    race.rezultatas_pagal_pirmaji_naudotoja = result;
+                }
+                else if (race.User2Id == userId)
+                {
+                    race.rezultatas_pagal_antraji_naudotoja = result;
+                }
+                _context.SaveChanges();
+
+                if (race.rezultatas_pagal_pirmaji_naudotoja != 100 && race.rezultatas_pagal_antraji_naudotoja != 100)
+                {
+                    bool checkResult = CheckBothResults(race);
+                    if (checkResult)//tikrinam ar rezultatai sutampa (ty. niekas nemelavo)
+                    {
+                        AddTrustScoreToBothCompetitors(race.User1Id, race.User2Id);
+                        //Recalculate Elo
+                        //Recalculate the experience level
+                        InformRacersOfEndOfMatch(race.Id_Lenktynes);//kad parodyti kuris laimejo screena turi but finished true ir final true 
+                        //achievementai
+                        //tikrinam ar gavo nauju achievementu
+                        //jeigu gavo ifas
+                    }
+                    //else//po rezultatu patikros rezultatai nesutapo (ty.kazkas pamelavo)
+                    //{
+                    //    int m = CheckTrustScoreDifference(race.User1Id, race.User2Id);
+                    //    if (m > 30)//kadangi trust score zenkliai skiriasi , darom skunda
+                    //    {
+                    //        // Get data about the race
+                    //        var raceData = GetDataAboutRace(race.Id_Lenktynes);
+
+                    //        // Get data about the racers
+                    //        var racerData = GetDataAboutRacers(race.User1Id, race.User2Id);
+
+                    //        // Call the CreateAppeal method
+                    //        if (raceData != null && racerData.Item1 != null && racerData.Item2 != null)
+                    //        {
+                    //            CreateAppeal(raceData, racerData.Item1, racerData.Item2);
+                    //            InformRacersOfAppeal(racerData.Item1, racerData.Item2);
+                    //        }
+                    //    }
+                    //    else//priskiriam pergale naudotojui su didesniu trust score
+                    //    {
+                    //        DeclareVictor(race.User1Id, race.User2Id, race.Id_Lenktynes);
+                    //        //recalculate Elo
+                    //        //recalculate the experience level
+                    //        InformRacersOfEndOfMatch(race.Id_Lenktynes);
+                    //        //achievementai
+                    //        //tikrinam ar gavo nauju achievements
+                    //        //jeigu gavo iffas
+                    //    }
+
+                    //}
+                }
+
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
+        private void DeclareVictor(int user1Id, int user2Id, int raceId)
+        {
+            try
+            {
+                // Get trust scores of both racers
+                int trustScore1 = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == user1Id)?.Pasitikimo_taskai ?? 0;
+                int trustScore2 = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == user2Id)?.Pasitikimo_taskai ?? 0;
+
+                // Update the race in the lenktynes table based on trust scores
+                bool user1Won = trustScore1 > trustScore2;
+
+                var race = _context.Race.FirstOrDefault(r => r.Id_Lenktynes == raceId);
+                if (race != null)
+                {
+                    //race.ar_lenktynes_pasibaigusios = true;
+                    race.rezultatas_pagal_pirmaji_naudotoja = user1Won ? 1 : 0;
+                    race.rezultatas_pagal_antraji_naudotoja = user1Won ? 0 : 1;
+                    _context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions
+                Console.WriteLine("Error in declaring victor: " + ex.Message);
+            }
+        }
+        private bool CheckBothResults(Race race)
+        {
+            var lenktynes = _context.Race
+                .FirstOrDefault(r => r.Id_Lenktynes == race.Id_Lenktynes);
+
+            if (lenktynes == null)
+            {
+                // Handle the case where the lenktynes record is not found
+                return false;
+            }
+
+            // Compare the results
+            if (lenktynes.rezultatas_pagal_pirmaji_naudotoja != lenktynes.rezultatas_pagal_antraji_naudotoja)
+            {
+                return true;//true jei geri rezultatai ir niekas nesukciavo
+            }
+
+            return false;//false, jei kazkas sukciavo ir ivede bloga rezultata
+        }
+
+        private void AddTrustScoreToBothCompetitors(int user1Id, int user2Id)
+        {
+            var user1 = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == user1Id);
+            var user2 = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == user2Id);
+
+            if (user1 != null && user2 != null)
+            {
+                user1.Pasitikimo_taskai++;
+                user2.Pasitikimo_taskai++;
+                _context.SaveChanges();
+            }
+        }
+
+        private void InformRacersOfEndOfMatch(int lenktyniuId)
+        {
+            try
+            {
+                // Retrieve the race based on its ID
+                var race = _context.Race.FirstOrDefault(r => r.Id_Lenktynes == lenktyniuId);
+                if (race != null)
+                {
+                    // Set ar_lenktynes_pasibaigusios to true
+                    race.ar_lenktynes_pasibaigusios = true;
+
+                    // Save the changes to the database
+                    _context.SaveChanges();
+                }
+                else
+                {
+                    // Handle the case where the race is not found
+                    Console.WriteLine("Race not found with ID: " + lenktyniuId);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions
+                Console.WriteLine("Error in informing racers of the end of the match: " + ex.Message);
+            }
+        }
+        private void InformRacersOfAppeal(User racer1, User racer2)
+        {
+            try
+            {
+                // You can implement your notification mechanism here
+                // For example, you can send emails, push notifications, or update a notification table in the database
+                // You can use the racer1 and racer2 objects to access their information and notify them accordingly
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions
+                Console.WriteLine("Error in informing racers of appeal: " + ex.Message);
+            }
+        }
+        private int CheckTrustScoreDifference(int userId1, int userId2)
+        {
+            try
+            {
+                var user1 = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == userId1);
+                var user2 = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == userId2);
+
+                if (user1 == null || user2 == null)
+                {
+                    // If any of the users is not found, return 0 as the difference
+                    return 0;
+                }
+
+                // Calculate the difference between trust scores
+                int trustScoreDifference = Math.Abs(user1.Pasitikimo_taskai - user2.Pasitikimo_taskai);
+                return trustScoreDifference;
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions and return 0
+                Console.WriteLine("Error in calculating trust score difference: " + ex.Message);
+                return 0;
+            }
+        }
+        public Race GetDataAboutRace(int raceId)
+        {
+            try
+            {
+                // Retrieve data about the race based on its ID
+                var race = _context.Race.FirstOrDefault(r => r.Id_Lenktynes == raceId);
+                return race;
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions
+                Console.WriteLine("Error in getting data about the race: " + ex.Message);
+                return null;
+            }
+        }
+        public User GetDataAboutRacer(int id)
+        {
+            try
+            {
+                // Retrieve data about the race based on its ID
+                var user = _context.Users.FirstOrDefault(r => r.Id_Naudotojas == id);
+                return user;
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions
+                Console.WriteLine("Error in getting data about the user: " + ex.Message);
+                return null;
+            }
+        }
+
+        private (User, User) GetDataAboutRacers(int userId1, int userId2)
+        {
+            try
+            {
+                // Retrieve data about both racers based on their User IDs
+                var user1 = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == userId1);
+                var user2 = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == userId2);
+                return (user1, user2);
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions
+                Console.WriteLine("Error in getting data about the racers: " + ex.Message);
+                return (null, null);
+            }
+        }
+        private void CreateAppeal(Race race, User racer1, User racer2)
+        {
+            try
+            {
+                // Create a new entry in the skundas table
+                Complaint newAppeal = new Complaint
+                {
+                    Paaiskinimas = $"Naudotojo kurio id yra {racer1.Id_Naudotojas} ir naudotojo, kurio id yra {racer2.Id_Naudotojas} rezultatai nesutampa. Reikia patikrinimo",
+                    Sukurimo_Data = DateTime.Now,
+                    Uzdarytas = false,
+                    Id_Lenktynes = race.Id_Lenktynes
+                };
+
+                // Add the new entry to the skundas table
+                _context.Complaint.Add(newAppeal);
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions
+                Console.WriteLine("Error in creating appeal: " + ex.Message);
+            }
+        }
+        [HttpPost]
+        public IActionResult MatchPage(int raceId, int loggedInUserId)
+        {
+            Console.WriteLine("Informavome apie lenktyniu baigti");
+            ViewBag.RaceId = raceId;
+            ViewBag.LoggedInUserId = loggedInUserId;
+            return View();
+        }
 
     }
 }

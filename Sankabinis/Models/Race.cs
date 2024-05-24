@@ -30,9 +30,9 @@ namespace Sankabinis.Models
 
         [DefaultValue(false)]
         public bool ar_lenktynes_pasibaigusios { get; set; }
-
+        [DefaultValue(100)]
         public int rezultatas_pagal_pirmaji_naudotoja { get; set; }
-
+        [DefaultValue(100)]
         public int rezultatas_pagal_antraji_naudotoja { get; set; }
 
         [DefaultValue(false)]

@@ -21,5 +21,6 @@ namespace Sankabinis.Data
         public DbSet<Distance> Distance { get; set; }
         public DbSet <Race> Race { get; set; }
         public DbSet <Track> Track {get; set; }
+        public DbSet <Complaint> Complaint { get; set; }
     }
 }

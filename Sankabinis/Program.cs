@@ -28,6 +28,9 @@ builder.Services.AddSession();
 // Register GoogleApiController
 builder.Services.AddScoped<GoogleApiController>(); // Assuming GoogleApiController has no dependencies and can be created per request
 
+//SignalR
+builder.Services.AddSignalR();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
