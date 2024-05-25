@@ -8611,11 +8611,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tnaru\\Desktop\\FINALINIS\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
+      "projectUniqueName": "C:\\Users\\tnaru\\Desktop\\testas\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
       "projectName": "Sankabinis",
-      "projectPath": "C:\\Users\\tnaru\\Desktop\\FINALINIS\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
+      "projectPath": "C:\\Users\\tnaru\\Desktop\\testas\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
       "packagesPath": "C:\\Users\\tnaru\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tnaru\\Desktop\\FINALINIS\\Sankabinis\\Sankabinis\\obj\\",
+      "outputPath": "C:\\Users\\tnaru\\Desktop\\testas\\Sankabinis\\Sankabinis\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -8704,13 +8704,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\tnaru\\Desktop\\FINALINIS\\Sankabinis\\Sankabinis\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

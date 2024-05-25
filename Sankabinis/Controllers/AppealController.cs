@@ -1,5 +1,4 @@
-﻿using AspNetCore;
-using GoogleApi.Entities.Search.Common;
+﻿using GoogleApi.Entities.Search.Common;
 using Microsoft.AspNetCore.Mvc;
 using Sankabinis.Data;
 using Sankabinis.Models;
@@ -34,25 +33,27 @@ namespace Sankabinis.Controllers
 
         public IActionResult AppealPage()
         {
-            Race matchInfo = new Race();
+            List<Race> matchInfo = new List<Race>();
 
-            matchInfo = FetchAppealMatch();
+            int raceId = new int();
+
+            matchInfo = FetchAppealMatch(raceId);
 
             List<User> matchUsers = new List<User>();
 
-            matchUsers = FetchAppealUsers(matchInfo.User1Id, matchInfo.User2Id);
+            matchUsers = FetchAppealUsers(matchInfo.First().User1Id, matchInfo.First().User2Id);
 
             return View();
         }
 
-        private Race FetchAppealMatch(int? raceID )
+        private List<Race> FetchAppealMatch(int? raceID)
         {
-            return _context.Race.Where(c => c.Id_Lenktynes == raceID);
+            return _context.Race.Where(c => c.Id_Lenktynes == raceID).ToList();
         }
 
         private List<User> FetchAppealUsers(int? user1ID, int? user2ID)
         {
-            return _context.User.Where(c => c.Id_Naudotojas == user1ID || c.Id_Naudotojas == user2ID).ToList();
+            return _context.Users.Where(c => c.Id_Naudotojas == user1ID || c.Id_Naudotojas == user2ID).ToList();
         }
 
     }

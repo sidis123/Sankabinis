@@ -12,7 +12,7 @@ using Sankabinis.Data;
 namespace Sankabinis.Migrations
 {
     [DbContext(typeof(SankabinisContext))]
-    [Migration("20240525112542_Init")]
+    [Migration("20240525134020_Init")]
     partial class Init
     {
         /// <inheritdoc />
