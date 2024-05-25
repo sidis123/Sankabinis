@@ -35,10 +35,16 @@ namespace Sankabinis.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<bool>("Generic")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Pavadinimas")
                         .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id_Pasiekimas");
 
@@ -204,6 +210,12 @@ namespace Sankabinis.Migrations
                         .HasColumnType("int");
 
                     b.Property<bool>("ar_galutinis_rezultatas")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("ar_gavo_antras")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("ar_gavo_pirmas")
                         .HasColumnType("bit");
 
                     b.Property<bool>("ar_laikas_patvirtintas")

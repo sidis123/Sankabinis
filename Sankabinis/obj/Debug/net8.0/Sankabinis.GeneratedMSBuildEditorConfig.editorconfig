@@ -17,115 +17,123 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Sankabinis
 build_property.RootNamespace = Sankabinis
-build_property.ProjectDir = C:\Users\tnaru\Desktop\Naujausias analinis seksas\Sankabinis\Sankabinis\
+build_property.ProjectDir = C:\Users\tnaru\Desktop\FINALINIS\Sankabinis\Sankabinis\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\tnaru\Desktop\Naujausias analinis seksas\Sankabinis\Sankabinis
+build_property.MSBuildProjectDirectory = C:\Users\tnaru\Desktop\FINALINIS\Sankabinis\Sankabinis
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Achievements/AchievementPage.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Achievements/AchievementPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNoaWV2ZW1lbnRzXEFjaGlldmVtZW50UGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Cars/Create.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Appeal/AppealPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwZWFsXEFwcGVhbFBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Appeal/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwZWFsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Cars/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Cars/Delete.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Cars/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Cars/Details.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Cars/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Cars/Edit.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Cars/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Cars/Index.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Cars/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Home/Index.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Home/Privacy.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Leaders/LeaderPage.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Leaders/LeaderPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVhZGVyc1xMZWFkZXJQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Race/Index.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Race/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFjZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Race/MatchListPage.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Race/MatchListPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFjZVxNYXRjaExpc3RQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Race/MatchPage.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Race/MatchPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFjZVxNYXRjaFBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Shared/Error.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Tracks/Create.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Tracks/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhY2tzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Tracks/Delete.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Tracks/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhY2tzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Tracks/Details.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Tracks/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhY2tzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Tracks/Edit.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Tracks/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhY2tzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Tracks/Index.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Tracks/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhY2tzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/User/ProfileCreationPage.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/User/ProfileCreationPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQcm9maWxlQ3JlYXRpb25QYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/User/ProfilePage.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/User/ProfilePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQcm9maWxlUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/User/RegistrationPage.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/User/RegistrationPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3RyYXRpb25QYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/User/SignInPage.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/User/SignInPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTaWduSW5QYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/_ViewImports.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/_ViewStart.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tnaru/Desktop/Naujausias analinis seksas/Sankabinis/Sankabinis/Views/Shared/_Layout.cshtml]
+[C:/Users/tnaru/Desktop/FINALINIS/Sankabinis/Sankabinis/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-52xxcz5jgy

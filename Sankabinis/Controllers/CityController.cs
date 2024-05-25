@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Sankabinis.Data;
 using Sankabinis.Models;
+using Microsoft.Extensions.Configuration;
 
 namespace Sankabinis.Controllers
 {
@@ -29,6 +30,9 @@ namespace Sankabinis.Controllers
                 };
                 _context.City.Add(newCity);
                 _context.SaveChanges();
+
+                var googleController = new GoogleApiController(_context, null);
+                googleController.FindDistance(newCity);
             }
 
             return Ok();
