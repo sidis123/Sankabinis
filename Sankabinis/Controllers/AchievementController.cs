@@ -15,7 +15,10 @@ namespace Sankabinis.Controllers
 
         public IActionResult ShowAchievementList()
         {
-            List<Achievement> achievements = _context.Achievement.ToList();
+            var loggedInUserId = HttpContext.Session.GetInt32("UserId");
+            List<Achievement> achievements = _context.Achievement
+                                                     .Where(a => a.UserId == loggedInUserId.Value)
+                                                     .ToList();
             return Json(achievements);
         }
 

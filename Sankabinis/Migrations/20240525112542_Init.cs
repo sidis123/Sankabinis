@@ -68,7 +68,9 @@ namespace Sankabinis.Migrations
                     rezultatas_pagal_pirmaji_naudotoja = table.Column<int>(type: "int", nullable: false),
                     rezultatas_pagal_antraji_naudotoja = table.Column<int>(type: "int", nullable: false),
                     ar_galutinis_rezultatas = table.Column<bool>(type: "bit", nullable: false),
-                    TrackId = table.Column<int>(type: "int", nullable: false)
+                    TrackId = table.Column<int>(type: "int", nullable: false),
+                    ar_gavo_pirmas = table.Column<bool>(type: "bit", nullable: false),
+                    ar_gavo_antras = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -127,7 +129,9 @@ namespace Sankabinis.Migrations
                     Id_Pasiekimas = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Pavadinimas = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    Aprasas = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false)
+                    Aprasas = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    Generic = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {

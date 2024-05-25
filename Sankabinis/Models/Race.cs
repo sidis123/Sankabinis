@@ -40,5 +40,9 @@ namespace Sankabinis.Models
 
         [ForeignKey("Track")]
         public int TrackId { get; set; }
+        [DefaultValue(false)]
+        public bool ar_gavo_pirmas {  get; set; }
+        [DefaultValue(false)]
+        public bool ar_gavo_antras {  get; set; }
     }
 }

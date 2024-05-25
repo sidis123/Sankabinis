@@ -296,6 +296,21 @@ namespace Sankabinis.Controllers
                         InformRacersOfEndOfMatch(race.Id_Lenktynes);//kad parodyti kuris laimejo screena turi but ar pasibaigusios true ir final true 
                         //achievementai
                         //tikrinam ar gavo nauju achievementu
+                        bool gavoPirmas = CheckIfRacerGotAchievement(race.User1Id);
+                        bool gavoAntras = CheckIfRacerGotAchievement(race.User2Id);
+                        if (gavoPirmas || gavoAntras)
+                        {
+                            if (gavoPirmas)
+                            {
+                                RegisterNewAchievement(race.User1Id);
+                                InformRacerOfNewAchievement(race.User1Id, race.Id_Lenktynes);
+                            }
+                            if (gavoAntras)
+                            {
+                                RegisterNewAchievement(race.User2Id);
+                                InformRacerOfNewAchievement(race.User2Id, race.Id_Lenktynes);
+                            }
+                        }
                         //jeigu gavo ifas
                         Winner(race.Id_Lenktynes);
                     }
@@ -323,7 +338,21 @@ namespace Sankabinis.Controllers
                             InformRacersOfEndOfMatch(race.Id_Lenktynes);
                             //achievementai
                             //tikrinam ar gavo nauju achievements
-                            //jeigu gavo iffas
+                            bool gavoPirmas = CheckIfRacerGotAchievement(race.User1Id);
+                            bool gavoAntras = CheckIfRacerGotAchievement(race.User2Id);
+                            if(gavoPirmas || gavoAntras)
+                            {
+                                if (gavoPirmas)
+                                {
+                                    RegisterNewAchievement(race.User1Id);
+                                    InformRacerOfNewAchievement(race.User1Id, race.Id_Lenktynes);
+                                }
+                                if (gavoAntras)
+                                {
+                                    RegisterNewAchievement(race.User2Id);
+                                    InformRacerOfNewAchievement(race.User2Id, race.Id_Lenktynes);
+                                }
+                            }
                         }
 
                     }
@@ -565,6 +594,101 @@ namespace Sankabinis.Controllers
                 Console.WriteLine("Error in creating appeal: " + ex.Message);
             }
         }
+
+        private bool CheckIfRacerGotAchievement(int racerId)
+        {
+            try
+            {
+                // Retrieve the user based on the racerId
+                var user = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == racerId);
+
+                // Check if the user exists and if the Laimėta_lenktyniu is greater than 10
+                if (user != null && user.Laimėta_lenktyniu == 10)
+                {
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions
+                Console.WriteLine("Error in checking achievement: " + ex.Message);
+            }
+            return false;
+        }
+        private void RegisterNewAchievement(int racerId)
+        {
+            try
+            {
+                // Retrieve an existing achievement to copy
+                var existingAchievement = _context.Achievement.FirstOrDefault(a => a.Generic == true);
+
+                if (existingAchievement != null)
+                {
+                    // Create a new achievement based on the existing one
+                    var newAchievement = new Achievement
+                    {
+                        Pavadinimas = existingAchievement.Pavadinimas,
+                        Aprasas = existingAchievement.Aprasas,
+                        UserId = racerId,
+                        Generic = false
+                    };
+
+                    // Add the new achievement to the context
+                    _context.Achievement.Add(newAchievement);
+
+                    // Save changes to the database
+                    _context.SaveChanges();
+
+                }
+                else
+                {
+                    Console.WriteLine("No existing achievement found to copy.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions
+                Console.WriteLine("Error in registering new achievement: " + ex.Message);
+            }
+        }
+        private void InformRacerOfNewAchievement(int userid, int raceid)
+        {
+            try
+            {
+                var race = _context.Race.FirstOrDefault(r => r.Id_Lenktynes == raceid);
+
+                if (race != null)
+                {
+                    if (userid == race.User1Id)
+                    {
+                        race.ar_gavo_pirmas = true;
+                    }
+                    else if (userid == race.User2Id)
+                    {
+                        race.ar_gavo_antras = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("User ID does not match any racers in this race.");
+                        return;
+                    }
+
+                    // Save the changes to the database
+                    _context.SaveChanges();
+                }
+                else
+                {
+                    Console.WriteLine("Race not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions
+                Console.WriteLine("Error in InformRacerOfNewAchievement: " + ex.Message);
+            }
+        }
+
+
         [HttpPost]
         public IActionResult MatchPage(int raceId, int loggedInUserId)
         {
@@ -573,6 +697,8 @@ namespace Sankabinis.Controllers
             ViewBag.LoggedInUserId = loggedInUserId;
             return View();
         }
+
+        
 
     }
 }

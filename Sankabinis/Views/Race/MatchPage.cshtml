@@ -46,16 +46,76 @@ else
                                             } else {
                                                 $('#raceStatus').html('<h2>The race has ended</h2><p>The winner is: ' + winnerId + ' (user details not found)</p>');
                                             }
+
+                                            // Check for achievements
+                                            if (race.ar_gavo_pirmas) {
+                                                $.ajax({
+                                                    url: '@Url.Action("GetDataAboutRacer", "Race")',
+                                                    type: 'GET',
+                                                    data: { id: race.user1Id },
+                                                    success: function (user1) {
+                                                        if (user1) {
+                                                            $('#raceStatus').append('<p>' + user1.vardas_pavarde + ' has got an achievement. Please check your achievements.</p>');
+                                                        } else {
+                                                            $('#raceStatus').append('<p>User 1 has got an achievement. Please check your achievements.</p>');
+                                                        }
+                                                    }
+                                                });
+                                            }
+                                            if (race.ar_gavo_antras) {
+                                                $.ajax({
+                                                    url: '@Url.Action("GetDataAboutRacer", "Race")',
+                                                    type: 'GET',
+                                                    data: { id: race.user2Id },
+                                                    success: function (user2) {
+                                                        if (user2) {
+                                                            $('#raceStatus').append('<p>' + user2.vardas_pavarde + ' has got an achievement. Please check your new achievements.</p>');
+                                                        } else {
+                                                            $('#raceStatus').append('<p>User 2 has got an achievement. Please check your new achievements.</p>');
+                                                        }
+                                                    }
+                                                });
+                                            }
                                         },
                                         error: function () {
                                             $('#raceStatus').html('<h2>The race has ended</h2><p>An error occurred while fetching the winner details.</p>');
+
+                                            // Check for achievements
+                                            if (race.ar_gavo_pirmas) {
+                                                $.ajax({
+                                                    url: '@Url.Action("GetDataAboutRacer", "Race")',
+                                                    type: 'GET',
+                                                    data: { id: race.user1Id },
+                                                    success: function (user1) {
+                                                        if (user1) {
+                                                            $('#raceStatus').append('<p>' + user1.vardas_pavarde + ' has got an achievement. Please check your achievements.</p>');
+                                                        } else {
+                                                            $('#raceStatus').append('<p>User 1 has got an achievement. Please check your achievements.</p>');
+                                                        }
+                                                    }
+                                                });
+                                            }
+                                            if (race.ar_gavo_antras) {
+                                                $.ajax({
+                                                    url: '@Url.Action("GetDataAboutRacer", "Race")',
+                                                    type: 'GET',
+                                                    data: { id: race.user2Id },
+                                                    success: function (user2) {
+                                                        if (user2) {
+                                                            $('#raceStatus').append('<p>' + user2.vardas_pavarde + ' has got an achievement. Please check your new achievements.</p>');
+                                                        } else {
+                                                            $('#raceStatus').append('<p>User 2 has got an achievement. Please check your new achievements.</p>');
+                                                        }
+                                                    }
+                                                });
+                                            }
                                         }
                                     });
                                 } else {
                                     $('#raceStatus').html('<h2>The race has ended</h2><p>No winner determined.</p>');
                                 }
                             } else {
-                                $('#raceStatus').html('<h2>The race has ended</h2><p>One of the racers was unhonest.An appeal was created, please wait while the admin approves the final score.</p>');
+                                $('#raceStatus').html('<h2>The race has ended</h2><p>One of the racers was dishonest. An appeal was created, please wait while the admin approves the final score.</p>');
                             }
                         } else {
                             // Race is still ongoing, show the form
