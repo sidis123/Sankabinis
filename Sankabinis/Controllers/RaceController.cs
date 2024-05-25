@@ -254,15 +254,15 @@ namespace Sankabinis.Controllers
             return tracks[index];
         }
 
-        //[HttpGet]
-        //public IActionResult InitiateRace()
-        //{
-        //    List<Track> tracks = _context.Track.ToList();
+        [HttpGet]
+        public IActionResult InitiateRace()
+        {
+            List<Track> tracks = _context.Track.ToList();
 
-        //    Track track = ChooseRandomTrack(tracks);
-
-
-        //}
+            Track track = ChooseRandomTrack(tracks);
+            Race race = new Race(); // cia idk iki sito point man atrodo turetu but kazkoks race i kuri paduotas ir random track ir tt?
+            return RedirectToAction("Index", "TimeChoice", race);
+        }
         [HttpPost]
         public IActionResult RegisterResult(int userId, int result, int raceId)
         {
@@ -695,10 +695,49 @@ namespace Sankabinis.Controllers
             Console.WriteLine("Informavome apie lenktyniu baigti");
             ViewBag.RaceId = raceId;
             ViewBag.LoggedInUserId = loggedInUserId;
-            return View();
+
+            var race = FetchMatch(raceId);
+
+            if(!IsTimeConfirmed(race))
+            {
+                if(!IsUserOfferer(loggedInUserId, race))
+                {
+                    return RedirectToAction("Index", "TimeChoice", race);
+                }
+            }
+
+            return View(race);
         }
 
-        
+        private Race FetchMatch(int raceId)
+        {
+            return _context.Race.Find(raceId);
+        }
+
+        private bool IsUserOfferer(int userId, Race race)
+        {
+            return userId == race.User1Id;
+        }
+
+        private bool IsTimeConfirmed(Race race)
+        {
+            return race.ar_laikas_patvirtintas;
+        }
+
+        public IActionResult MatchListPage(int loggedinId)
+        {
+            List<Race> matches = FetchMatches(loggedinId);
+
+            return View(matches);
+        }
+
+        private List<Race> FetchMatches(int loggedInUserId)
+        {
+            return _context.Race
+            .Where(r => r.User1Id == loggedInUserId || r.User2Id == loggedInUserId)
+            .ToList();
+        }
+
 
     }
 }
