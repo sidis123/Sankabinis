@@ -1,4 +1,5 @@
-﻿@using Sankabinis.Data
+﻿@model List<Sankabinis.Models.Race>
+@using Sankabinis.Data
 @using Sankabinis.Models
 @inject SankabinisContext _context
 
@@ -9,9 +10,10 @@
 
     if (loggedInUserId != null)
     {
-        userRaces = _context.Race
-            .Where(r => r.User1Id == loggedInUserId || r.User2Id == loggedInUserId)
-            .ToList();
+        //userRaces = _context.Race
+        //    .Where(r => r.User1Id == loggedInUserId || r.User2Id == loggedInUserId)
+        //    .ToList();
+        userRaces = Model;
     }
 }
 

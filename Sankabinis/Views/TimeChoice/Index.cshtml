@@ -1,0 +1,49 @@
+﻿@model Sankabinis.Models.Race
+
+@{
+    ViewData["Title"] = "Index";
+    var loggedInUserId = Context.Session.GetInt32("UserId");
+}
+
+<h1>Time selection</h1>
+
+
+@if (loggedInUserId == Model.User1Id && Model.ar_laikas_patvirtintas == false)
+{
+    <form asp-action="SubmitMatchTime" method="post">
+        <div class="form-group">
+            <label asp-for="pasiulytas_laikas" class="control-label"></label>
+            <input asp-for="pasiulytas_laikas" class="form-control" type="datetime-local" />
+            <span asp-validation-for="pasiulytas_laikas" class="text-danger"></span>
+        </div>
+        <input type="hidden" asp-for="Id_Lenktynes" />
+        <button type="submit" class="btn btn-primary">Confirm</button>
+    </form>
+    
+}
+
+@if(loggedInUserId == Model.User2Id && Model.ar_laikas_patvirtintas == false)
+{
+    <div>
+    <h4>Participants</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pasiulytas_laikas)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pasiulytas_laikas)
+        </dd>
+    </dl>
+    </div>
+    <div>
+        <form asp-action="TimeSelectConfirm" method="post">
+            <input type="hidden" name="Id_Lenktynes" value="@Model?.Id_Lenktynes" />
+            <button type="submit">Confirm</button>
+        </form>
+        <form asp-action="TimeSelectDeny" method="post">
+            <input type="hidden" name="Id_Lenktynes" value="@Model?.Id_Lenktynes" />
+            <button type="submit">Deny</button>
+        </form>
+    </div>
+}

@@ -1,3 +1,4 @@
+using GoogleApi.Entities.Search.Common;
 using Microsoft.AspNetCore.Mvc;
 using Sankabinis.Models;
 using System.Diagnostics;
@@ -29,9 +30,11 @@ namespace Sankabinis.Controllers
         {
             return View("~/Views/User/SignInPage.cshtml");
         }
-        public IActionResult NavigateToUserRacesPage()
+        public IActionResult NavigateToUserRacesPage(int userId)
         {
-            return View("~/Views/Race/MatchListPage.cshtml");
+            //int loggedinId = userId;
+            return RedirectToAction("MatchListPage", "Race", new { loggedinId = userId });
+            //return View("~/Views/Race/MatchListPage.cshtml");
         }
         public IActionResult NavigateToProfileCreationPage()
         {
@@ -58,6 +61,13 @@ namespace Sankabinis.Controllers
         public IActionResult NavigateToAppealListPage()
         {
             return RedirectToAction("Index", "Appeal");
+        }
+
+        //For testng
+        public IActionResult NavigateToTimeChoicePage()
+        {
+            Race race = new Race();
+            return RedirectToAction("Index", "TimeChoice", race);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
