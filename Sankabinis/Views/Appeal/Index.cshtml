@@ -1,5 +1,52 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<Sankabinis.Models.Complaint>
+
 @{
+    ViewData["Title"] = "Index";
 }
+
+<h1>User Appeals</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_Skundas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sukurimo_Data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uzdarytas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_Lenktynes)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id_Skundas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sukurimo_Data)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Uzdarytas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id_Lenktynes)
+                </td>
+                <td>
+
+                    <a asp-action="AppealPage" asp-route-raceId="@item.Id_Lenktynes">Details</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
