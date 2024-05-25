@@ -55,6 +55,11 @@ namespace Sankabinis.Controllers
             return RedirectToAction("Index", "Race");
         }
 
+        public IActionResult NavigateToAppealListPage()
+        {
+            return RedirectToAction("Index", "Appeal");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
