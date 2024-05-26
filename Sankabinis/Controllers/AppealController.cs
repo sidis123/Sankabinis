@@ -83,6 +83,8 @@ namespace Sankabinis.Controllers
 
             CloseAppeal(appealid);
             List<Complaint> appeals = FetchAppeals();
+
+            // ant galo gal cia padaryt, kad tipo refreshina tapati psl, bet raso closed
             return View("Index", appeals);
         }
 
@@ -119,6 +121,11 @@ namespace Sankabinis.Controllers
         {
             var appeal = _context.Complaint.Where(x => x.Id_Lenktynes == appealid).First();
             appeal.Uzdarytas = true;
+
+
+            //var race = _context.Race.Where(x => x.Id_Lenktynes == appealid).First();
+            //race.ar_lenktynes_pasibaigusios = true;
+            // Cia dar gal kazka reik kad damust lenktynes padaryt
             _context.Complaint.Update(appeal);
             _context.SaveChanges();
             return 1;
