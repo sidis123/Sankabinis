@@ -29,8 +29,10 @@ namespace Sankabinis.Controllers
             var raceId = Id_Lenktynes;
             var loggedInUserId = _context.Race.Find(Id_Lenktynes).User1Id;
             //Cia notify opponent kazka
-
-            return RedirectToAction("MatchPage", "Race", new { raceId, loggedInUserId});
+            var race = _context.Race.Find(raceId);
+            TempData["SuccessMessage"] = "Time successfully submitted!";
+            return View("Index", race);
+            //return RedirectToAction("MatchPage", "Race", new { raceId, loggedInUserId});
         }
 
         public int UpdateMatchTime(int raceId, DateTime time)
@@ -55,7 +57,10 @@ namespace Sankabinis.Controllers
             var raceId = Id_Lenktynes;
             var loggedInUserId = _context.Race.Find(Id_Lenktynes).User2Id;
 
-            return RedirectToAction("MatchPage", "Race", new { raceId = raceId, loggedInUserId = loggedInUserId });
+            var race = _context.Race.Find(raceId);
+            TempData["SuccessMessage"] = "Time successfully confirmed!";
+            return View("Index", race);
+            //return RedirectToAction("MatchPage", "Race", new { raceId = raceId, loggedInUserId = loggedInUserId });
         }
 
         public int UpdateTimeConfirm(int raceId)
