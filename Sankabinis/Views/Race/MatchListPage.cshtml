@@ -74,9 +74,28 @@ else
                                 <button type="submit" class="btn btn-primary">Go To Race</button>
                             </form>
                         </td>
+                        @if(race.User1Id == loggedInUserId && race.ar_laikas_patvirtintas == false)
+                        {
+                            <td><span class="exclamation">!</span></td>
+                        }
                     </tr>
                 }
             </tbody>
         </table>
     }
 }
+
+<style>
+    .exclamation {
+        background-color: yellow;
+        color: black;
+        font-weight: bold;
+        font-size: 24px; /* Increase font size for bigger exclamation point */
+        padding: 5px 10px; /* Increase padding for better visibility */
+        border-radius: 5px; /* Slightly more rounded corners */
+        display: inline-flex; /* Use inline-flex to center align the text */
+        align-items: center; /* Center align the exclamation point vertically */
+        justify-content: center; /* Center align the exclamation point horizontally */
+        margin-left: 10px; /* Add space between button and exclamation point */
+    }
+</style>
