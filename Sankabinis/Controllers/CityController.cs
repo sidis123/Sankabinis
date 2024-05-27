@@ -9,16 +9,20 @@ namespace Sankabinis.Controllers
     public class CityController : Controller
     {
         private readonly SankabinisContext _context;
-        public CityController(SankabinisContext context)
+        private readonly GoogleApiController _googleApiController;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public CityController(GoogleApiController googleApiController, SankabinisContext context, IWebHostEnvironment webHostEnvironment)
         {
+            _googleApiController = googleApiController;
             _context = context;
+            _webHostEnvironment = webHostEnvironment;
         }
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult CheckIfExists(string cityPavadinimas)
+        public  async Task<IActionResult> CheckIfExists(string cityPavadinimas)
         {
             var existingCity = _context.City.FirstOrDefault(c => c.Pavadinimas == cityPavadinimas);
             if (existingCity == null)
@@ -31,8 +35,7 @@ namespace Sankabinis.Controllers
                 _context.City.Add(newCity);
                 _context.SaveChanges();
 
-                var googleController = new GoogleApiController(_context, null);
-                googleController.FindDistance(newCity);
+                await _googleApiController.FindDistance(newCity);
             }
 
             return Ok();

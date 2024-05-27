@@ -2,10 +2,13 @@
 using Sankabinis.Controllers;
 using Sankabinis.Data;
 using Sankabinis.Models;
+using System.ComponentModel.DataAnnotations;
 
 public class UserController : Controller
 {
+    private readonly GoogleApiController _googleApiController;
     private readonly SankabinisContext _context;
+    private readonly IWebHostEnvironment _webHostEnvironment;
 
     public UserController(SankabinisContext context)
     {
@@ -115,15 +118,40 @@ public class UserController : Controller
         if (string.IsNullOrEmpty(user.Vardas_pavarde) ||
             string.IsNullOrEmpty(user.El_pastas) ||
             string.IsNullOrEmpty(user.Patirtis) ||
-            string.IsNullOrEmpty(cityPavadinimas))
+            string.IsNullOrEmpty(cityPavadinimas) ||
+            user.Gimimo_data == null)
         {
             ModelState.AddModelError(string.Empty, "Please fill in all required fields.");
+            Console.WriteLine("neveikia0");
             return View("ProfileCreationPage", user);
         }
+
+        if (!new EmailAddressAttribute().IsValid(user.El_pastas))
+        {
+            ModelState.AddModelError("El_pastas", "Please enter a valid email address.");
+            Console.WriteLine("neveikia1");
+            return View("ProfileCreationPage", user);
+        }
+
+        if (user.Svoris <= 0)
+        {
+            ModelState.AddModelError("Svoris", "Please enter a valid weight.");
+            return View("ProfileCreationPage", user);
+        }
+
+        var today = DateTime.Today;
+        var age = today.Year - user.Gimimo_data.Year;
+        if (user.Gimimo_data.Date > today.AddYears(-age)) age--;
+        if (age > 120)
+        {
+            ModelState.AddModelError("Gimimo_data", "Please fill in date.");
+            return View("ProfileCreationPage", user);
+        }
+
         var loggedInUserId = HttpContext.Session.GetInt32("UserId");
         var loggedInUser = _context.Users.FirstOrDefault(u => u.Id_Naudotojas == loggedInUserId);
 
-        var cityController = new CityController(_context);
+        var cityController = new CityController(_googleApiController, _context, _webHostEnvironment);
         cityController.CheckIfExists(cityPavadinimas);
 
         loggedInUser.Vardas_pavarde = user.Vardas_pavarde;
