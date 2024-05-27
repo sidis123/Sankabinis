@@ -1,5 +1,6 @@
 ﻿using GoogleApi.Entities.Search.Common;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Sankabinis.Data;
 using Sankabinis.Models;
 using System.Collections.Generic;
@@ -155,12 +156,9 @@ namespace Sankabinis.Controllers
                     bool raceAlreadyExists = false;
                     foreach (var potentialRaceWithOponent in potentialRacesWithOponent)
                     {
-                        if (potentialRaceWithOponent.Automobilio_klase == uniqueClass &&
-                            ((potentialRaceWithOponent.User1Id == loggedInUserId && potentialRaceWithOponent.Pirmo_naudotojo_patvirtinimas == true) ||
-                            (potentialRaceWithOponent.User2Id == loggedInUserId && potentialRaceWithOponent.Antro_naudotojo_patvirtinimas == true)))
+                        if (potentialRaceWithOponent.Automobilio_klase == uniqueClass)
                         {
                             raceAlreadyExists = true;
-                            potentialRacesWithOponent.Remove(potentialRaceWithOponent);
                             break;
                         }
                     }
@@ -171,13 +169,20 @@ namespace Sankabinis.Controllers
                             User1Id = (int)loggedInUserId,
                             User2Id = potentialOponent.Id_Naudotojas,
                             Automobilio_klase = uniqueClass,
+                            rezultatas_pagal_pirmaji_naudotoja = 100,
+                            rezultatas_pagal_antraji_naudotoja = 100
                         };
 
                         potentialRaces.Add(newRace);
                     }
                 }
-
-                potentialRaces.AddRange(potentialRacesWithOponent);
+                foreach (var potentialRaceWithOponent in potentialRacesWithOponent)
+                {
+                    if (!((potentialRaceWithOponent.User1Id == loggedInUserId && potentialRaceWithOponent.Pirmo_naudotojo_patvirtinimas == true) || (potentialRaceWithOponent.User2Id == loggedInUserId && potentialRaceWithOponent.Antro_naudotojo_patvirtinimas == true)))
+                    {
+                        potentialRaces.Add(potentialRaceWithOponent);
+                    }
+                }
             }
 
             if (potentialRaces.Count == 0)
@@ -226,11 +231,7 @@ namespace Sankabinis.Controllers
         [HttpPost]
         public IActionResult ConfirmRace([FromBody]Race race)
         {
-
-            Console.WriteLine(race.User1Id);
-            Console.WriteLine(race.User2Id);
-
-            var existingRace = _context.Race.FirstOrDefault(r => ((r.User1Id == race.User1Id && r.User2Id == race.User2Id) || (r.User1Id == race.User2Id && r.User2Id == race.User1Id)) && r.Automobilio_klase == race.Automobilio_klase);
+            var existingRace = _context.Race.Find(race.Id_Lenktynes);
             
             if (existingRace == null)
             {
@@ -241,8 +242,6 @@ namespace Sankabinis.Controllers
             }
             else
             {
-                existingRace.Antro_naudotojo_patvirtinimas = true;
-                _context.SaveChanges();
                 return Ok(new { action = "existingRaceConfirmed" });
             }
         }
@@ -254,15 +253,24 @@ namespace Sankabinis.Controllers
             return tracks[index];
         }
 
-        [HttpGet]
-        public IActionResult InitiateRace()
+        [HttpPost]
+        public IActionResult InitiateRace([FromBody] Race race)
         {
             List<Track> tracks = _context.Track.ToList();
 
             Track track = ChooseRandomTrack(tracks);
-            Race race = new Race(); // cia idk iki sito point man atrodo turetu but kazkoks race i kuri paduotas ir random track ir tt?
-            return RedirectToAction("Index", "TimeChoice", race);
+
+            race.TrackId = track.Id_Trasa;
+
+            race.Antro_naudotojo_patvirtinimas = true;
+
+            _context.Race.Update(race);
+            _context.SaveChanges();
+
+            var redirectUrl = Url.Action("Index", "TimeChoice", new { id = race.Id_Lenktynes});
+            return Json(new { redirectUrl });
         }
+
         [HttpPost]
         public IActionResult RegisterResult(int userId, int result, int raceId)
         {
@@ -689,7 +697,6 @@ namespace Sankabinis.Controllers
         }
 
 
-        [HttpPost]
         public IActionResult MatchPage(int raceId, int loggedInUserId)
         {
             Console.WriteLine("Informavome apie lenktyniu baigti");

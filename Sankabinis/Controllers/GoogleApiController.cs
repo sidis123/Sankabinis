@@ -21,7 +21,7 @@ namespace Sankabinis.Controllers
         public GoogleApiController(SankabinisContext context, IConfiguration configuration)
         {
             _context = context;
-            _googleApiKey = "";
+            _googleApiKey = "AIzaSyCbzBDXZu1UKZEh_XlBOYo3qX14fIBGJ5o";
         }
 
         public async Task<IActionResult> FindDistance(City city)

@@ -17,8 +17,10 @@ namespace Sankabinis.Controllers
             _context = context;
         }
 
-        public IActionResult Index(Race race)
+        public IActionResult Index(int id)
         {
+            var race = _context.Race.Find(id);
+
             return View(race);
         }
 
@@ -31,8 +33,8 @@ namespace Sankabinis.Controllers
             //Cia notify opponent kazka
             var race = _context.Race.Find(raceId);
             TempData["SuccessMessage"] = "Time successfully submitted!";
-            return View("Index", race);
-            //return RedirectToAction("MatchPage", "Race", new { raceId, loggedInUserId});
+            //return View("Index", race);
+            return RedirectToAction("MatchPage", "Race", new { raceId, loggedInUserId});
         }
 
         public int UpdateMatchTime(int raceId, DateTime time)
