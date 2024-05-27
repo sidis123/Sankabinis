@@ -58,14 +58,95 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
+<!-- Modal for displaying created track information -->
+<div class="modal " id="trackInfoModal" tabindex="-1" role="dialog" aria-labelledby="trackInfoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="trackInfoModalLabel">New Track Created</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="trackInfoModalBody">
+                <!-- Track information will be displayed here -->
+            </div>
+            <div class="modal-footer">
+                <a href="@Url.Action("Index", "Tracks")" class="btn btn-primary">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
     <script>
-        // Update hidden input with selected city name
-        $('#cityName').change(function () {
-            $('#cityNameHidden').val($(this).val());
+        $(document).ready(function () {
+            // Update hidden input with selected city name
+            $('#cityName').change(function () {
+                $('#cityNameHidden').val($(this).val());
+            });
+
+            // Handle form submission
+            $('form').submit(function (e) {
+                $('#cityName').trigger('change');
+                e.preventDefault(); // Prevent default form submission
+                $.ajax({
+                    url: $(this).attr('action'), // Form action URL
+                    type: $(this).attr('method'), // Form method (POST)
+                    data: $(this).serialize(), // Form data
+                    success: function (response) {
+                        if (response.success) {
+                            // If track creation was successful, display modal
+                            displayTrackModal(response.track);
+                        } else {
+                            // Handle errors if needed
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        // Handle errors if needed
+                    }
+                });
+            });
+
+            // Function to display modal with track information
+            function displayTrackModal(track) {
+                $('#trackInfoModalBody').html(""); // Clear previous content
+
+                const staticMapURL = `https://maps.googleapis.com/maps/api/staticmap?size=600x300&markers=label:A|${track.start_coordinates}&markers=label:B|${track.finish_coordinates}&key=`;
+                // Populate modal with track information
+                $('#trackInfoModalBody').append(`
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label><strong>Track Name:</strong></label>
+                                <p class="form-control">${track.name}</p>
+                            </div>
+                            <div class="form-group">
+                                <label><strong>Start Coordinates:</strong></label>
+                                <p class="form-control">${track.start_coordinates}</p>
+                            </div>
+                            <div class="form-group">
+                                <label><strong>Finish Coordinates:</strong></label>
+                                <p class="form-control">${track.finish_coordinates}</p>
+                            </div>
+                            <div class="form-group">
+                                <label><strong>Image:</strong></label>
+                                <img src="${track.image}" alt="Track Image" class="img-fluid">
+                            </div>
+                            <div class="form-group">
+                                <label><strong>Static Map:</strong></label>
+                                <img src="${staticMapURL}" alt="Static Map" class="img-fluid">
+                           </div>
+                        </div>
+                    </div>
+                `);
+
+                $('#trackInfoModal').modal('show'); // Show modal
+            }
         });
     </script>
 }
