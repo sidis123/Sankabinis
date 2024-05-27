@@ -733,6 +733,8 @@ namespace Sankabinis.Controllers
             ViewBag.RaceId = raceId;
             ViewBag.LoggedInUserId = loggedInUserId;
 
+            Complaint complaint = _context.Complaint.Where(x => x.Id_Lenktynes == raceId).FirstOrDefault();
+
             var race = FetchMatch(raceId);
 
             if(!IsTimeConfirmed(race))
@@ -743,7 +745,11 @@ namespace Sankabinis.Controllers
                 }
             }
 
-            return View(race);
+            RaceParticipantsViewModel raceParticipantsViewModel = new RaceParticipantsViewModel();
+            raceParticipantsViewModel.Race = race;
+            raceParticipantsViewModel.Appeal = complaint;
+
+            return View(raceParticipantsViewModel);
         }
 
         private Race FetchMatch(int raceId)

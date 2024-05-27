@@ -26,7 +26,14 @@
         </dd>
     </dl>
 </div>
-<div>
-    <a asp-action="ChooseWinner" asp-route-id1="@Model?.User1.Id_Naudotojas" asp-route-id2="@Model?.User2.Id_Naudotojas" asp-route-appealid="@Model?.Race.Id_Lenktynes">Participant 1</a> |
-    <a asp-action="ChooseWinner" asp-route-id2="@Model?.User1.Id_Naudotojas" asp-route-id1="@Model?.User2.Id_Naudotojas" asp-route-appealid="@Model?.Race.Id_Lenktynes">Participant 2</a>
-</div>
+@if(!Model.Appeal.Uzdarytas)
+{
+    <div>
+        <a asp-action="ChooseWinner" asp-route-id1="@Model?.User1.Id_Naudotojas" asp-route-id2="@Model?.User2.Id_Naudotojas" asp-route-appealid="@Model?.Race.Id_Lenktynes">Participant 1</a> |
+        <a asp-action="ChooseWinner" asp-route-id2="@Model?.User1.Id_Naudotojas" asp-route-id1="@Model?.User2.Id_Naudotojas" asp-route-appealid="@Model?.Race.Id_Lenktynes">Participant 2</a>
+    </div>
+}
+else
+{
+    <div>Appeal closed</div>
+}

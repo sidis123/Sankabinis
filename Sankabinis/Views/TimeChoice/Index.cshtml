@@ -15,6 +15,37 @@
     </div>
 }
 
+<div>
+    <h4>Race Information</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Track
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TrackId)
+        </dd>
+        <dt class="col-sm-2">
+            User 1
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User1Id)
+        </dd>
+        <dt class="col-sm-2">
+            User 2
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User2Id)
+        </dd>
+        <dt class="col-sm-2">
+            Car class
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Automobilio_klase)
+        </dd>
+        </dd>
+    </dl>
+</div>
 
 @if (loggedInUserId == Model.User2Id && Model.ar_laikas_patvirtintas == false && TempData["SuccessMessage"] == null)
 {

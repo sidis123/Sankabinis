@@ -1,4 +1,4 @@
-﻿@model Sankabinis.Models.Race
+﻿@model Sankabinis.Models.RaceParticipantsViewModel
 
 @{
     ViewBag.Title = "Match";
@@ -14,34 +14,40 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.TrackId)
+            Track
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.TrackId)
+            @Html.DisplayFor(model => model.Race.TrackId)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.pasiulytas_laikas)
+            Time
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.pasiulytas_laikas)
+            @Html.DisplayFor(model => model.Race.pasiulytas_laikas)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ar_laikas_patvirtintas)
+            Time confirmation
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ar_laikas_patvirtintas)
+            @Html.DisplayFor(model => model.Race.ar_laikas_patvirtintas)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.User1Id)
+            User 1
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.User1Id)
+            @Html.DisplayFor(model => model.Race.User1Id)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.User2Id)
+            User 2
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.User2Id)
+            @Html.DisplayFor(model => model.Race.User2Id)
+        </dd>
+        <dt class="col-sm-2">
+            Car class
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Race.Automobilio_klase)
         </dd>
         </dd>
     </dl>
@@ -56,7 +62,7 @@ else
     <div id="raceStatus"></div>
 }
 
-@if(Model.ar_laikas_patvirtintas == true)
+@if(Model.Race.ar_laikas_patvirtintas == true)
 {
 @section Scripts {
     <script>
@@ -154,7 +160,7 @@ else
                                         }
                                     });
                                 } else {
-                                    $('#raceStatus').html('<h2>The race has ended</h2><p>No winner determined.</p>');
+                                    $('#raceStatus').html('<h2>The race has ended</h2>');
                                 }
                             } else {
                                 $('#raceStatus').html('<h2>The race has ended</h2><p>One of the racers was dishonest. An appeal was created, please wait while the admin approves the final score.</p>');
@@ -225,5 +231,13 @@ else
             });
         });
     </script>
+
+
 }
+
+@if(Model.Race.ar_galutinis_rezultatas == true && Model.Race.ar_lenktynes_pasibaigusios == true && Model.Race.rezultatas_pagal_pirmaji_naudotoja == Model.Race.rezultatas_pagal_antraji_naudotoja)
+{
+        <p>@Html.DisplayFor(model => model.Appeal.Paaiskinimas)</p>
+}
+
 }
