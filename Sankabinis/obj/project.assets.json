@@ -8604,19 +8604,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\myka\\.nuget\\packages\\": {}
+    "C:\\Users\\Deivis\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\myka\\Documents\\GitHub\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
+      "projectUniqueName": "C:\\Users\\Deivis\\Desktop\\PSAFINAL\\Sankabinis\\Sankabinis.csproj",
       "projectName": "Sankabinis",
-      "projectPath": "C:\\Users\\myka\\Documents\\GitHub\\Sankabinis\\Sankabinis\\Sankabinis.csproj",
-      "packagesPath": "C:\\Users\\myka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\myka\\Documents\\GitHub\\Sankabinis\\Sankabinis\\obj\\",
+      "projectPath": "C:\\Users\\Deivis\\Desktop\\PSAFINAL\\Sankabinis\\Sankabinis.csproj",
+      "packagesPath": "C:\\Users\\Deivis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Deivis\\Desktop\\PSAFINAL\\Sankabinis\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\myka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Deivis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8624,6 +8629,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8636,6 +8642,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -8688,7 +8699,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
