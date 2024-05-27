@@ -741,7 +741,7 @@ namespace Sankabinis.Controllers
             {
                 if(!IsUserOfferer(loggedInUserId, race))
                 {
-                    return RedirectToAction("Index", "TimeChoice", race);
+                    return RedirectToAction("Index", "TimeChoice", new { id = raceId });
                 }
             }
 
@@ -759,7 +759,7 @@ namespace Sankabinis.Controllers
 
         private bool IsUserOfferer(int userId, Race race)
         {
-            return userId == race.User1Id;
+            return userId == race.User2Id;
         }
 
         private bool IsTimeConfirmed(Race race)
