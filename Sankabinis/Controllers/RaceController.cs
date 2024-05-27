@@ -246,6 +246,36 @@ namespace Sankabinis.Controllers
             }
         }
 
+        [HttpPost]
+        public IActionResult DisagreeToRace([FromBody] Race race)
+        {
+            var existingRace = _context.Race.Find(race.Id_Lenktynes);
+            int? loggedInUserId = HttpContext.Session.GetInt32("UserId");
+
+            if (existingRace == null)
+            {
+                race.Pirmo_naudotojo_patvirtinimas = false;
+                _context.Race.Add(race);
+                _context.SaveChanges();
+                return Ok();
+            }
+            else
+            {
+                if(existingRace.User1Id == loggedInUserId)
+                {
+                    existingRace.Pirmo_naudotojo_patvirtinimas = false;
+                }
+                else
+                {
+                    existingRace.Antro_naudotojo_patvirtinimas = false;
+                }
+                _context.Update(existingRace);
+                _context.SaveChanges();
+                return Ok();
+            }
+        }
+
+
         private Track ChooseRandomTrack(List<Track> tracks)
         {
             Random random = new Random();
@@ -709,7 +739,7 @@ namespace Sankabinis.Controllers
             {
                 if(!IsUserOfferer(loggedInUserId, race))
                 {
-                    return RedirectToAction("Index", "TimeChoice", new { id = raceId });
+                    return RedirectToAction("Index", "TimeChoice", race);
                 }
             }
 
@@ -723,7 +753,7 @@ namespace Sankabinis.Controllers
 
         private bool IsUserOfferer(int userId, Race race)
         {
-            return userId == race.User2Id;
+            return userId == race.User1Id;
         }
 
         private bool IsTimeConfirmed(Race race)
