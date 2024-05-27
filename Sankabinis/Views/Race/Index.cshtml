@@ -77,15 +77,12 @@ else
                     data: JSON.stringify(race),
                     success: function (response) {
                         if (response.action === "newRaceCreated") {
-                            // Logic to move to the next available card
                             showNextCard();
                         } else if (response.action === "existingRaceConfirmed") {
-                            // Logic for existing race confirmation
-                            handleExistingRaceConfirmation();
+                            handleExistingRaceConfirmation(race);
                         }
                     },
                     error: function (xhr, status, error) {
-                        // Handle error
                     }
                 });
             }
@@ -100,7 +97,7 @@ else
                         showNextCard();
                     },
                     error: function (xhr, status, error) {
-                        // Handle error
+
                     }
                 });
             }
@@ -117,16 +114,20 @@ else
                 }
             }
 
-            function handleExistingRaceConfirmation() {
+            function handleExistingRaceConfirmation(race) {
                 $.ajax({
                     url: '@Url.Action("InitiateRace", "Race")',
-                    type: 'GET',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(race),
                     success: function (response) {
-                        // Handle success response
-                        console.log("InitiateRace method called successfully.");
+                        if (response.redirectUrl) {
+                            window.location.href = response.redirectUrl; // Perform the redirection
+                        } else {
+                            console.log("InitiateRace method called successfully, but no redirect URL found.");
+                        }
                     },
                     error: function (xhr, status, error) {
-                        // Handle error
                         console.error("Error calling InitiateRace method:", error);
                     }
                 });

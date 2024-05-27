@@ -16,7 +16,7 @@
 }
 
 
-@if (loggedInUserId == Model.User1Id && Model.ar_laikas_patvirtintas == false && TempData["SuccessMessage"] == null)
+@if (loggedInUserId == Model.User2Id && Model.ar_laikas_patvirtintas == false && TempData["SuccessMessage"] == null)
 {
     <form asp-action="SubmitMatchTime" method="post">
         <div class="form-group">
@@ -27,10 +27,9 @@
         <input type="hidden" asp-for="Id_Lenktynes" />
         <button type="submit" class="btn btn-primary">Confirm</button>
     </form>
-    
 }
 
-@if(loggedInUserId == Model.User2Id && Model.ar_laikas_patvirtintas == false)
+@if(loggedInUserId == Model.User1Id && Model.ar_laikas_patvirtintas == false)
 {
     <div>
     <h4>Participants</h4>
