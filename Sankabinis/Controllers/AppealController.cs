@@ -47,6 +47,7 @@ namespace Sankabinis.Controllers
             raceParticipantsViewModel.User1 = matchUsers.First();
             raceParticipantsViewModel.User2 = matchUsers.Last();
             raceParticipantsViewModel.Race = matchInfo.First();
+            raceParticipantsViewModel.Appeal = _context.Complaint.Where(x => x.Id_Lenktynes == raceId).First();
 
             return View(raceParticipantsViewModel);
         }
@@ -66,6 +67,10 @@ namespace Sankabinis.Controllers
             //Recalculate ELO
             //Recalucatle EXP
 
+            var appeal = _context.Complaint.Where(x => x.Id_Lenktynes == appealid).First();
+            var winner = _context.Users.Find(id1);
+            appeal.Paaiskinimas = $"The decided winner: {winner.Slapyvardis}.";
+
             IncreaseTrustScore(id1);
 
             DecreaseTrustScore(id2);
@@ -74,18 +79,19 @@ namespace Sankabinis.Controllers
 
             if(loserScore < 20)
             {
-                //warn
+                WarnUser(id2, appeal);
             }
             if(loserScore <= 0)
             {
-                BanUser(id2);
+                BanUser(id2, appeal);
             }
 
             CloseAppeal(appealid);
-            List<Complaint> appeals = FetchAppeals();
+
 
             // ant galo gal cia padaryt, kad tipo refreshina tapati psl, bet raso closed
-            return View("Index", appeals);
+            return RedirectToAction("AppealPage", new {raceId = appealid});
+
         }
 
         private int IncreaseTrustScore(int id)
@@ -109,11 +115,21 @@ namespace Sankabinis.Controllers
             return _context.Users.Find(id).Pasitikimo_taskai;
         }
 
-        private int BanUser(int id)
+        private int BanUser(int id, Complaint appeal)
         {
             var user = _context.Users.Find(id);
             user.Suspeduotos_busenos_skaicius = 1;
+            appeal.Paaiskinimas += $"User {user} has been banned.";
+            _context.Complaint.Update(appeal);
             _context.Users.Update(user);
+            return 1;
+        }
+
+        private int WarnUser(int id, Complaint appeal)
+        {
+            var user = _context.Users.Find(id);
+            appeal.Paaiskinimas += $" WARNING! {user}, your trust score is low.";
+            _context.Complaint.Update(appeal);
             return 1;
         }
 
@@ -121,12 +137,14 @@ namespace Sankabinis.Controllers
         {
             var appeal = _context.Complaint.Where(x => x.Id_Lenktynes == appealid).First();
             appeal.Uzdarytas = true;
-
+            var race = _context.Race.Find(appealid);
+            race.ar_galutinis_rezultatas = true;
 
             //var race = _context.Race.Where(x => x.Id_Lenktynes == appealid).First();
             //race.ar_lenktynes_pasibaigusios = true;
             // Cia dar gal kazka reik kad damust lenktynes padaryt
             _context.Complaint.Update(appeal);
+            _context.Race.Update(race);
             _context.SaveChanges();
             return 1;
         }
