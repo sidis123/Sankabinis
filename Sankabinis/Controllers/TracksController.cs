@@ -72,7 +72,7 @@ namespace Sankabinis.Controllers
                     _context.SaveChanges();
 
 
-                    await _googleApiController.FindDistance(city);
+                    _googleApiController.FindDistance(city);
 
                 }
                 track.CityId = _context.City.FirstOrDefault(c => c.Pavadinimas == cityName).Id_Miestas;

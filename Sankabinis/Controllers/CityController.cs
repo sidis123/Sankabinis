@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Sankabinis.Data;
 using Sankabinis.Models;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 
 namespace Sankabinis.Controllers
 {
@@ -22,24 +23,36 @@ namespace Sankabinis.Controllers
             return View();
         }
 
-        public  async Task<IActionResult> CheckIfExists(string cityPavadinimas)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CheckIfExists(string cityPavadinimas)
         {
-            var existingCity = _context.City.FirstOrDefault(c => c.Pavadinimas == cityPavadinimas);
-            if (existingCity == null)
+            var cityExists = _context.City.Any(c => c.Pavadinimas == cityPavadinimas);
+            if (!cityExists)
             {
-                var newCity = new City
+                var filePath = Path.Combine(_webHostEnvironment.WebRootPath, "lt.json");
+                var json = System.IO.File.ReadAllText(filePath);
+                var citiesJson = JsonConvert.DeserializeObject<List<CityJson>>(json);
+
+                var selectedCityObject = citiesJson.FirstOrDefault(city => city.city == cityPavadinimas);
+
+                City city = new City
                 {
-                    Pavadinimas = cityPavadinimas,
-                    Koordinates = ""
+                    Pavadinimas = selectedCityObject.city,
+                    Koordinates = selectedCityObject.lat + ", " + selectedCityObject.lng
                 };
-                _context.City.Add(newCity);
+
+
+                _context.City.Add(city);
+
                 _context.SaveChanges();
 
-                await _googleApiController.FindDistance(newCity);
+
+                _googleApiController.FindDistance(city);
+
             }
 
             return Ok();
         }
-
     }
 }

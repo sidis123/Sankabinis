@@ -10,9 +10,11 @@ public class UserController : Controller
     private readonly SankabinisContext _context;
     private readonly IWebHostEnvironment _webHostEnvironment;
 
-    public UserController(SankabinisContext context)
+    public UserController(GoogleApiController googleApiController, SankabinisContext context, IWebHostEnvironment webHostEnvironment)
     {
+        _googleApiController = googleApiController;
         _context = context;
+        _webHostEnvironment = webHostEnvironment;
     }
 
     [HttpPost]

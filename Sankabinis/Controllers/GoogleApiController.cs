@@ -24,7 +24,7 @@ namespace Sankabinis.Controllers
             _googleApiKey = "AIzaSyCbzBDXZu1UKZEh_XlBOYo3qX14fIBGJ5o";
         }
 
-        public async Task<IActionResult> FindDistance(City city)
+        public IActionResult FindDistance(City city)
         {
             var cities = _context.City.Where(c => c.Id_Miestas != city.Id_Miestas).ToList();
 
@@ -42,7 +42,7 @@ namespace Sankabinis.Controllers
                         Destinations = new List<LocationEx> { new LocationEx(new Address(destinationCity.Pavadinimas)) }
                     };
 
-                    var response = await GoogleApi.GoogleMaps.DistanceMatrix.QueryAsync(request);
+                    var response = GoogleApi.GoogleMaps.DistanceMatrix.QueryAsync(request).Result;
 
                     if (response.Status == Status.Ok && response.Rows.Any())
                     {
@@ -59,14 +59,15 @@ namespace Sankabinis.Controllers
                                 Atstumas = element.Distance.Value / 1000
                             };
 
-                            _context.Add(distance);
+                            _context.Distance.Add(distance);
+                            _context.SaveChanges();
                         }
                     }
                 }
             }
 
             // Save all changes to the database
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
 
             return Ok("Distances calculated and saved successfully.");
         }
