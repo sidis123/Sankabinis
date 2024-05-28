@@ -13,7 +13,7 @@ namespace Sankabinis.Models
         [Required(ErrorMessage = "Pavadinimas is required")]
         [StringLength(255)]
         public string Pavadinimas { get; set; }
-
+        [Required(ErrorMessage = "Aprašas is required")]
         [StringLength(255)]
         public string Aprasas { get; set; }
 
