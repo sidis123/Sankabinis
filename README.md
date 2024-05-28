@@ -39,7 +39,4 @@ Package Manager Console: Add-Migration pavadinimas
 Package Manager Console: Update-Database
 
 Jeigu lentele nauja man pesasi su esamom lentelem jau tai per ssms istrinu visa duombaze SankabinisDB ir tada Update-Database darau. Bet dingsta visi irasai, tai iskart reiktu pasidaryt viska.
-=======
-# Sankabinis
-Racing app
->>>>>>> 77972e545a142a21e71a6f142027d34f4339f952
+
