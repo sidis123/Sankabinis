@@ -329,7 +329,8 @@ namespace Sankabinis.Controllers
                     if (checkResult)//tikrinam ar rezultatai sutampa (ty. niekas nemelavo)
                     {
                         AddTrustScoreToBothCompetitors(race.User1Id, race.User2Id);
-                        //Recalculate Elo
+                        var eloController = new EloController(_context);
+                        eloController.Init(race.User1Id, race.User2Id, race.Automobilio_klase);
                         //Recalculate the experience level
                         InformRacersOfEndOfMatch(race.Id_Lenktynes);//kad parodyti kuris laimejo screena turi but ar pasibaigusios true ir final true 
                         //achievementai
@@ -371,7 +372,8 @@ namespace Sankabinis.Controllers
                         else//priskiriam pergale naudotojui su didesniu trust score pasibaigusios true ir final true
                         {
                             DeclareVictor(race.User1Id, race.User2Id, race.Id_Lenktynes);
-                            //recalculate Elo
+                            var eloController = new EloController(_context);
+                            eloController.Init(race.User1Id, race.User2Id, race.Automobilio_klase);
                             //recalculate the experience level
                             InformRacersOfEndOfMatch(race.Id_Lenktynes);
                             //achievementai

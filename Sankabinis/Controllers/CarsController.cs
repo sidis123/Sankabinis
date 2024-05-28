@@ -19,13 +19,25 @@ namespace Sankabinis.Controllers
         {
             _context = context;
         }
-        
+
         // GET: CarsPage
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Car.ToListAsync());
+            var loggedInUserId = HttpContext.Session.GetInt32("UserId");
+            if (loggedInUserId == null)
+            {
+                return RedirectToPage("/Home/NavigateToSignInPage");
+                //return RedirectToAction("../Home/NavigateToSignInPage"); // Or any other appropriate action
+            }
+
+            var userCars = _context.Car
+                .Where(car => car.Fk_Naudotojasid_Naudotojas == loggedInUserId.Value)
+                .ToListAsync();
+
+            return View(await userCars);
         }
 
+        // GET: CarsPage/Details/5
         // GET: CarsPage/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -34,8 +46,15 @@ namespace Sankabinis.Controllers
                 return NotFound();
             }
 
+            var loggedInUserId = HttpContext.Session.GetInt32("UserId");
+            if (loggedInUserId == null)
+            {
+                return RedirectToAction("Login"); // Or any other appropriate action
+            }
+
             var automobilis = await _context.Car
-                .FirstOrDefaultAsync(m => m.Id_Automobilis == id);
+                .FirstOrDefaultAsync(m => m.Id_Automobilis == id && m.Fk_Naudotojasid_Naudotojas == loggedInUserId.Value);
+
             if (automobilis == null)
             {
                 return NotFound();
@@ -43,6 +62,7 @@ namespace Sankabinis.Controllers
 
             return View(automobilis);
         }
+
 
         // GET: CarsPage/Create
         public IActionResult Create()
@@ -89,19 +109,26 @@ namespace Sankabinis.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id_Automobilis,Modelis,Marke,Numeris,Galingumas,Spalva,Rida,Pagaminimo_data,Svoris,Kuro_tipas,Pavaru_deze,Kebulas,Fk_Naudotojasid_Naudotojas")] Car automobilis)
+        public async Task<IActionResult> Create([Bind("Id_Automobilis,Modelis,Marke,Numeris,Galingumas,Spalva,Rida,Pagaminimo_data,Svoris,Kuro_tipas,Pavaru_deze,Kebulas")] Car automobilis)
         {
             if (ModelState.IsValid)
             {
-                automobilis.Klase = CalculateClass(automobilis.Svoris, automobilis.Galingumas);
+                // Retrieve the logged in user's ID from session
+                var loggedInUserId = HttpContext.Session.GetInt32("UserId");
+
+                // Set the user ID to the car object
+                automobilis.Fk_Naudotojasid_Naudotojas = loggedInUserId.Value;
+
                 _context.Add(automobilis);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            // Reload dropdown data for re-displaying form
+
+            // Reload dropdown data for re-displaying form if validation fails
             LoadSelectLists();
             return View(automobilis);
         }
+
         private bool ValidateData(Car car)
         {
             return true;
